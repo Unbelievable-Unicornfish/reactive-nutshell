@@ -29,11 +29,12 @@
             "title":"test",
             "summary":"test",
             "url":"test.com",
+            "timeStamp":"",
             "userId":1,
             "id":1
         }
     ],
-    "chats": [
+    "messages": [
         {
             "message":"",
             "creationDateTime":"",
