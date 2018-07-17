@@ -1,52 +1,73 @@
 {
-    "tasks": [
-        {
-            "name":"Eat Food",
-            "dueDate":"12/13/12",
-            "completed":false,
-            "id":1,
-            "userId":1
-        }
-    ],
-    "events": [
-        {
-        "name":"WOOO",
-        "date":"12/12/12",
-        "location":"Nashville",
-        "id":1,
-        "userId":1
-        }
-],
-    "users": [
-        {
-            "userName":"Blah111",
-            "email":"Blah@blah.com",
-            "id":1
-        }
-    ],
-    "articles": [
-        {
-            "title":"test",
-            "summary":"test",
-            "url":"test.com",
-            "timeStamp":"",
-            "userId":1,
-            "id":1
-        }
-    ],
-    "messages": [
-        {
-            "message":"",
-            "creationDateTime":"",
-            "userId":1,
-            "id":1
-        }
-    ],
-    "friends": [
-        {
-            "id":1,
-            "userId":1,
-            "friendId":2
-        }
-    ]
+  "tasks": [
+    {
+      "name": "Eat Food",
+      "dueDate": "12/13/12",
+      "completed": false,
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "events": [
+    {
+      "name": "WOOO",
+      "date": "12/12/12",
+      "location": "Nashville",
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "userName": "Blah111",
+      "email": "Blah@blah.com",
+      "id": 1
+    }
+  ],
+  "articles": [
+    {
+      "title": "test",
+      "summary": "test",
+      "url": "test.com",
+      "timeStamp": "",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "messages": [
+    {
+      "message": "",
+      "creationDateTime": "",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "friendId": 2
+    }
+  ]
 }
