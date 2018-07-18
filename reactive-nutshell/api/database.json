@@ -6,6 +6,16 @@
       "completed": false,
       "id": 1,
       "userId": 1
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "123123",
+      "id": 2
+    },
+    {
+      "name": "yay",
+      "DueDate": "things",
+      "id": 3
     }
   ],
   "events": [
