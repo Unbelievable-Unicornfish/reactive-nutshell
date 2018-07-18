@@ -6,50 +6,31 @@ export default class ChatList extends Component {
         messages: []
     }
 
-    // componentDidMount() {
-    //     fetch("http://localhost:5002/messages")
-    //         .then(e => e.json())
-    //         .then(messages => this.setState({ messages: messages }))
-    // }
-    
+    componentDidMount() {
+        fetch("http://localhost:5002/messages")
+            .then(e => e.json())
+            .then(messages => this.setState({ messages: messages }))
+    }
+
 
     messageFormInput = (event) => {
         const stateToChange = {}
-            stateToChange[event.target.id] = event.target.value
-            console.log("stateToChange", stateToChange)
-            this.setState(stateToChange)
-            console.log("this.state", this.state)
+        stateToChange[event.target.id] = event.target.value
+        console.log("stateToChange", stateToChange)
+        this.setState(stateToChange)
+        console.log("this.state", this.state)
     }
 
-    addMessage (event){
+    addMessage(event) {
         event.preventDefault()
-        const newObject = {name: this.state.name, dueDate: this.state.dueDate}
+        const newObject = { name: this.state.name, dueDate: this.state.dueDate }
         fetch("http://localhost:5002/messages", {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newObject)
         })
     }
-
-    checkOutMessage = (messageId) => {
-        // Delete the specified chat from the API
-        fetch(`http://localhost:5002/messages/${messageId}`, {
-            method: "DELETE"
-        })
-            // When DELETE is finished, retrieve the new list of chat
-            .then(() => {
-                // Remember you HAVE TO return this fetch to the subsequenet `then()`
-                return fetch("http://localhost:5002/messages")
-            })
-            // Once the new array of messages are retrieved, set the state
-            .then(a => a.json())
-            .then(chatList => {
-                this.setState({
-                    messages: chatList
-                })
-            })
-    }
-
+    //rendering the form
     render() {
         return (
             <React.Fragment>
@@ -70,7 +51,6 @@ export default class ChatList extends Component {
                     this.state.messages.map(message =>
                         <Chat key={message.id}
                             message={message}
-                            checkOutMessage={this.checkOutMessage}
                         />
                     )
                 }
