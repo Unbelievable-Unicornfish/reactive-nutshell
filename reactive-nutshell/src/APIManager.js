@@ -15,7 +15,13 @@ const Database = Object.create({}, {
           console.log("User stuff", currentUserObject)
           return currentUserObject.currentUserId
         }
-    }
+    },
+    getAllTasks: {
+        value: () => {
+            return fetch("http://localhost:5002/tasks")
+            .then(e => e.json())   
+        }
+    },
 
 })
 export default Database

@@ -19,7 +19,7 @@ export default props => {
                         Details
                     </Link>
                 } */}
-                <a href="#" onClick={() => props.deletTask(props.task.id)}>Delete</a>
+                <a href="#" onClick={() => props.deleteTask(props.task.id)}>Delete</a>
             </div>
         </div>
     )
