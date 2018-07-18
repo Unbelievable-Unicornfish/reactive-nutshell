@@ -15,7 +15,13 @@ const Database = Object.create({}, {
           console.log("User stuff", currentUserObject)
           return currentUserObject.currentUserId
         }
+    },
+    //this is the chat function section
+    gettingAllMessagesFromDatabase: {
+     value: () => {
+         return fetch("http://localhost:5002/messages")
+         .then(e => e.json())
+     }
     }
-
 })
 export default Database
