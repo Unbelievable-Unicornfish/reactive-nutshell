@@ -1,6 +1,8 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import {link} from "react-router-dom";
 
 export default props => {
+ console.log(props.article.id)
     return (
       <div className="card" style={{width: `18rem`}}>
         <div className="card-body">
