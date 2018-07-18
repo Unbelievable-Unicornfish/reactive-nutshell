@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import Chat from "./Chat"
+import Database from "./APIManager"
 
 export default class ChatList extends Component {
     state = {
         messages: []
     }
-
+//"fetching" the state from the database 
     componentDidMount() {
-        fetch("http://localhost:5002/messages")
-            .then(e => e.json())
+        Database.gettingAllMessagesFromDatabase()
             .then(messages => this.setState({ messages: messages }))
     }
 
-
+//checking to see if the state has changed
     messageFormInput = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
