@@ -23,7 +23,7 @@ export default class ChatList extends Component {
 
     addMessage(event) {
         event.preventDefault()
-        const newObject = { name: this.state.name, dueDate: this.state.dueDate }
+        const newObject = { message: this.state.Chat, dueDate: this.state.dueDate }
         fetch("http://localhost:5002/messages", {
             method: "POST",
             headers: { "Content-Type": "application/json" },

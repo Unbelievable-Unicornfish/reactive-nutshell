@@ -26,24 +26,22 @@ export default class TaskList extends Component {
                 })
             })
     }
-
+//get tasks from Database
     componentDidMount() {
         Database.getAllTasks()
             .then(tasks => this.setState({ tasks: tasks }))
     }
-
+//checking to see if the state has changed
     taskFormInput = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
-        console.log("name", event.target.value)
-        // console.log("stateToChange", stateToChange)
+        console.log("stateToChange", stateToChange)
         this.setState(stateToChange)
-        // console.log("this.state", this.state)
     }
 
     addTask(event) {
         event.preventDefault()
-        const newObject = { name: this.state.name, dueDate: this.state.dueDate }
+        const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate }
         console.log("event", event)
         console.log("newObject", newObject)
         fetch("http://localhost:5002/tasks", {
@@ -53,10 +51,8 @@ export default class TaskList extends Component {
         })
             // When POST is finished, retrieve the new list of tasks
             .then(() => {
-                // Remember you HAVE TO return this fetch to the subsequenet `then()`
                 return fetch("http://localhost:5002/tasks")
             })
-            // Once the new array of tasks is retrieved, set the state
             .then(a => a.json())
             .then(taskList => {
                 this.setState({
@@ -64,7 +60,7 @@ export default class TaskList extends Component {
                 })
             })
     }
-
+// creating the form
     render() {
         return (
             <React.Fragment>
