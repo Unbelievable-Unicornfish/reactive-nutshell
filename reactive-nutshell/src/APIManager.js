@@ -22,6 +22,13 @@ const Database = Object.create({}, {
          return fetch("http://localhost:5002/messages")
          .then(e => e.json())
      }
-    }
+    },
+    getAllTasks: {
+        value: () => {
+            return fetch("http://localhost:5002/tasks")
+            .then(e => e.json())   
+        }
+    },
+
 })
 export default Database
