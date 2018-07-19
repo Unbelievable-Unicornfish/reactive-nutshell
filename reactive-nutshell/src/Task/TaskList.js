@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Task from "./Task"
-import Database from "./APIManager"
+import Database from "../APIManager"
 
 
 export default class TaskList extends Component {
@@ -35,7 +35,7 @@ export default class TaskList extends Component {
     taskFormInput = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
-        console.log("stateToChange", stateToChange)
+        // console.log("stateToChange", stateToChange)
         this.setState(stateToChange)
     }
 
@@ -47,8 +47,8 @@ export default class TaskList extends Component {
     addTask(event) {
         event.preventDefault()
         const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate }
-        console.log("event", event)
-        console.log("newObject", newObject)
+        // console.log("event", event)
+        // console.log("newObject", newObject)
         fetch("http://localhost:5002/tasks", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
