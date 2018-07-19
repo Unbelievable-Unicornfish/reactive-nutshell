@@ -26,6 +26,7 @@
   ],
   "articles": [
     {
+
       "title": "Cat Eats Baby",
       "summary": "Cat Gets Hungry",
       "Url": "www.cnn.com",
@@ -58,4 +59,41 @@
     }
   ],
   "friends": []
+
+      "title": "test",
+      "summary": "test",
+      "url": "test.com",
+      "timeStamp": "",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "messages": [
+    {
+      "message": "TEST",
+      "creationDateTime": "03/03/16",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "friendId": 2
+    }
+  ]
+
 }

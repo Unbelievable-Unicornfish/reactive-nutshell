@@ -16,6 +16,7 @@ const Database = Object.create({}, {
           return currentUserObject.currentUserId
         }
     },
+
     getAllArticles: {
         value: () => {
             return fetch("http://localhost:5002/articles")
@@ -53,5 +54,20 @@ const Database = Object.create({}, {
             .then(a => a.json())
         }
      }
+
+    //this is the chat function section
+    gettingAllMessagesFromDatabase: {
+     value: () => {
+         return fetch("http://localhost:5002/messages")
+         .then(e => e.json())
+     }
+    },
+    getAllTasks: {
+        value: () => {
+            return fetch("http://localhost:5002/tasks")
+            .then(e => e.json())   
+        }
+    },
+
 })
 export default Database
