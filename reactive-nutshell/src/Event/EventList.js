@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Event from "./Event"
-import Database from "./APIManager"
-
+import Database from "../APIManager"
 export default class EventList extends Component {
   state = {
     events: []
