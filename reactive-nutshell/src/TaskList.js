@@ -8,24 +8,24 @@ export default class TaskList extends Component {
         tasks: []
     }
 
-    deleteTask = (taskId) => {
-        // Delete the specified task from the API
-        fetch(`http://localhost:5002/tasks/${taskId}`, {
-            method: "DELETE"
-        })
-            // When DELETE is finished, retrieve the new list of tasks
-            .then(() => {
-                // Remember you HAVE TO return this fetch to the subsequenet `then()`
-                return fetch("http://localhost:5002/tasks")
-            })
-            // Once the new array of tasks is retrieved, set the state
-            .then(a => a.json())
-            .then(taskList => {
-                this.setState({
-                    tasks: taskList
-                })
-            })
-    }
+    // deleteTask = (taskId) => {
+    //     // Delete the specified task from the API
+    //     fetch(`http://localhost:5002/tasks/${taskId}`, {
+    //         method: "DELETE"
+    //     })
+    //         // When DELETE is finished, retrieve the new list of tasks
+    //         .then(() => {
+    //             // Remember you HAVE TO return this fetch to the subsequenet `then()`
+    //             return fetch("http://localhost:5002/tasks")
+    //         })
+    //         // Once the new array of tasks is retrieved, set the state
+    //         .then(a => a.json())
+    //         .then(taskList => {
+    //             this.setState({
+    //                 tasks: taskList
+    //             })
+    //         })
+    // }
 //get tasks from Database
     componentDidMount() {
         Database.getAllTasks()
@@ -37,6 +37,11 @@ export default class TaskList extends Component {
         stateToChange[event.target.id] = event.target.value
         console.log("stateToChange", stateToChange)
         this.setState(stateToChange)
+    }
+
+    completeTask = (taco)  => {
+        console.log(taco)
+    
     }
 
     addTask(event) {
@@ -86,7 +91,7 @@ export default class TaskList extends Component {
                 </form>
                 {
                     this.state.tasks.map(task =>
-                        <Task key={task.id} task={task} deleteTask={this.deleteTask}>
+                        <Task key={task.id} task={task} completeTask={this.completeTask}>
                             {task.name}
                         </Task>
                     )
