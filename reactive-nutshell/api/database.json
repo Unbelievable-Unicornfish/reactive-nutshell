@@ -1,52 +1,107 @@
 {
-    "tasks": [
-        {
-            "name":"Eat Food",
-            "dueDate":"12/13/12",
-            "completed":false,
-            "id":1,
-            "userId":1
-        }
-    ],
-    "events": [
-        {
-        "name":"WOOO",
-        "date":"12/12/12",
-        "location":"Nashville",
-        "id":1,
-        "userId":1
-        }
-],
-    "users": [
-        {
-            "userName":"Blah111",
-            "email":"Blah@blah.com",
-            "id":1
-        }
-    ],
-    "articles": [
-        {
-            "title":"test",
-            "summary":"test",
-            "url":"test.com",
-            "timeStamp":"",
-            "userId":1,
-            "id":1
-        }
-    ],
-    "messages": [
-        {
-            "message":"",
-            "creationDateTime":"",
-            "userId":1,
-            "id":1
-        }
-    ],
-    "friends": [
-        {
-            "id":1,
-            "userId":1,
-            "friendId":2
-        }
-    ]
+  "tasks": [
+    {
+      "name": "Eat Food",
+      "dueDate": "12/13/12",
+      "completed": false,
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "events": [
+    {
+      "name": "WOOO",
+      "date": "12/12/12",
+      "location": "Nashville",
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "userName": "Blah111",
+      "email": "Blah@blah.com",
+      "id": 1
+    },
+    {
+      "userName": "Stalin",
+      "email": "SovietStalin47@USSR.gov",
+      "id": 2
+    },
+    {
+      "userName": "Adolf",
+      "email": "smallMustache@Deutschland.gov",
+      "id": 3
+    },
+    {
+      "userName": "Winston",
+      "email": "ChurchOnAHill@UK.gov",
+      "id": 4
+    },
+    {
+      "userName": "Franklin",
+      "email": "WheelsOfFreedom@US.gov",
+      "id": 6
+    },
+    {
+      "userName": "Benito",
+      "email": "SwitchingSides@ITLY.gov",
+      "id": 7
+    },
+    {
+      "userName": "Dwight",
+      "email": "Eisenhower@US.gov",
+      "id": 8
+    }
+  ],
+  "articles": [
+    {
+      "title": "test",
+      "summary": "test",
+      "url": "test.com",
+      "timeStamp": "",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "messages": [
+    {
+      "message": "",
+      "creationDateTime": "",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "friendId": 3
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "friendId": 4
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "friendId": 5
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "friendId": 6
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "friendId": 7
+    }
+  ]
 }
