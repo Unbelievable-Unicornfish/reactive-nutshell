@@ -36,6 +36,40 @@
   ],
   "articles": [
     {
+
+      "title": "Cat Eats Baby",
+      "summary": "Cat Gets Hungry",
+      "Url": "www.cnn.com",
+      "id": 1
+    },
+    {
+      "title": "Pig Eats Baby",
+      "summary": "Pig Gets Hungry",
+      "Url": "www.cnn.com",
+      "id": 3
+    },
+    {
+      "title": "hungry",
+      "summary": "need food",
+      "id": 4
+    },
+    {
+      "title": "Man Eats Cactus",
+      "summary": "Cactus isnt fun to eat",
+      "URL": "www.cnn.com",
+      "id": 5
+    }
+  ],
+  "messages": [
+    {
+      "message": "",
+      "creationDateTime": "",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "friends": []
+
       "title": "test",
       "summary": "test",
       "url": "test.com",
@@ -71,4 +105,5 @@
       "friendId": 2
     }
   ]
+
 }

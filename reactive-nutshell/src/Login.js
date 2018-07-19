@@ -1,5 +1,5 @@
-import React, { Component } from "react"
 import APIManager from "./APIManager"
+import React, { Component } from "react"
 
 export default class Login extends Component {
     state = {
