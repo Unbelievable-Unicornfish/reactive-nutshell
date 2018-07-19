@@ -11,7 +11,15 @@ export default props => {
                     {props.children}
                 </h5>
                 <p className="card-text">{props.task.DueDate}</p>
-                <a href="#" onClick={() => props.deleteTask(props.task.id)}>Delete</a>
+                <button>Edit</button>
+                <label>
+                    Is completed:
+          <input onClick={() => props.completeTask(props.task.id)}
+                        name="isCompleted"
+                        type="checkbox"
+                        // checked={props.task.deleteTask}
+                        />
+                 </label>
             </div>
         </div>
     )
