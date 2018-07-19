@@ -9,7 +9,8 @@ export default props => {
                 <h5 className="card-title">
                 </h5>
 
-                <p className="card-text">{props.event}</p>
+                <p className="card-text">{props.children}</p>
+                <button>Edit</button>
                 {/* <a href="#" onClick={() => props.deleteEvent(props.event.id)}>Delete</a> */}
 
                 {/* <a href="#" onClick={() => props.addEvent(props.event.id)}>Add</a> */}

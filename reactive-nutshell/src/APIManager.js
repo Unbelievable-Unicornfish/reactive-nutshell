@@ -68,6 +68,12 @@ const Database = Object.create({}, {
             .then(e => e.json())   
         }
     },
+    getAllEvents: {
+        value: () => {
+            return fetch("http://localhost:5002/events")
+            .then(e => e.json())
+        }
+    }
 
 })
 export default Database

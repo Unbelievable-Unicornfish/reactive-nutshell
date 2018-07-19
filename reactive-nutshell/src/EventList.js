@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Event from "./Event";
-import Database from "./ApiManager";
+import React, { Component } from "react"
+import Event from "./Event"
+import Database from "./APIManager"
 
 export default class EventList extends Component {
   state = {
@@ -16,14 +16,14 @@ componentDidMount() {
 eventFormInput = (event) => {
   const stateToChange = {}
   stateToChange[event.target.id] = event.target.value
-  this.setState(stageToChange)
+  this.setState(stateToChange)
 }
 
 // ADD A NEW EVENT TO THE DATABASE
   addEvent(event) {
     event.preventDefault()
     const newObject = { name: this.state.EventName, EventDate: this.state.EventDate, EventLocation: this.state.EventLocation }
-    console.log(newObject, "new event")
+    console.log("newObject", newObject)
     fetch("http://localhost:5002/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -35,10 +35,27 @@ eventFormInput = (event) => {
     .then(a => a.json())
     .then(eventList => {
       this.setState({
-        events: eventList
+        event: eventList
       })
     })
   }
+// UPDATE STATE UPON EDIT
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
+
+  handleUpdate = e => {
+    e.preventDefault();
+
+    const updatedEvent = {name: this.state.name, eventDate: this.state.eventDate, eventLocation: this.state.eventLocation}
+    Database.updateItem("event", this.props.event.id, updatedEvent)
+    .then(() => {
+      this.props.history.push("/event");
+    })
+  };
+
   
 // BUILD EVENT FORM    
       render() {
@@ -69,7 +86,10 @@ eventFormInput = (event) => {
                         required="" autoFocus="" />
                     <button type="submit">
                         Add Event
-                </button>
+                    </button>
+                    <button type="update">
+                        Update Event
+                    </button>
                 </form>
                 {
                     this.state.events.map(event =>
@@ -78,6 +98,8 @@ eventFormInput = (event) => {
                         </Event>
                     )
                 }
+
+                
             </React.Fragment>
         )
       }

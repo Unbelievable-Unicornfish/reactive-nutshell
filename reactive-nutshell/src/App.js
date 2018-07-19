@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
     
-
       <React.Fragment>
+     <Login />
      <ChatList />
      <TaskList />
      <EventList />
