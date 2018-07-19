@@ -53,7 +53,7 @@ const Database = Object.create({}, {
             // Once the new array of animals is retrieved, set the state
             .then(a => a.json())
         }
-     }
+     },
 
     //this is the chat function section
     gettingAllMessagesFromDatabase: {

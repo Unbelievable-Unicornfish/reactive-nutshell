@@ -12,13 +12,14 @@ class App extends Component {
   render() {
     return (
 
-     <ArticleList />
-    );
+  
+    
 
-      <React.Fragment>
-     <ChatList />
-     <TaskList />
-     </React.Fragment>
+    <React.Fragment>
+      <ArticleList />
+      <ChatList />
+      <TaskList />
+    </React.Fragment>
     )
 
   }
