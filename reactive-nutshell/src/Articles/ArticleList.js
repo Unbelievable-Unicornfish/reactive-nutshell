@@ -43,7 +43,7 @@ export default class ArticleList extends Component {
             .then(deletedArticle => this.setState({ articles: deletedArticle }))
     }
 
-    
+
 componentDidMount() {
     Database.getAllArticles()
         .then(articles => this.setState({ articles: articles }))
@@ -83,7 +83,7 @@ render() {
                 </button>
             </form>
             <Row className="show-grid">
-                <Col xs={10} md={3} style={{ border: `4px solid black` }}>
+                <Col xs={10} md={3}>
                     {
                         this.state.articles.map(article =>
                             <Article key={article.id}
