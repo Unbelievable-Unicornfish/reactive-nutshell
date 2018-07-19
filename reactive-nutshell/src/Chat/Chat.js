@@ -6,7 +6,7 @@ export default props => {
         <div className="card" style={{ width: `18rem` }}>
             <div className="card-body">
                 <p className="card-text">{props.message.message}</p>
-                <button>Edit</button>
+                <a href="#" onClick={() => props.EditChat(props.message.id)}>Edit</a>
             </div>
         </div>
     )
