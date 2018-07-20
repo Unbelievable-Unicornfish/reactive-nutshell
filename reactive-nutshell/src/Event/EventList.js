@@ -3,7 +3,8 @@ import Event from "./Event"
 import Database from "../APIManager"
 export default class EventList extends Component {
   state = {
-    events: []
+    events: [],
+    eventToEdit: {}
   }
 
   // GET EVENTS FROM DB
@@ -54,6 +55,39 @@ eventFormInput = (event) => {
       this.props.history.push("/event");
     })
   };
+  handleEdit = (event) => {
+      event.preventDefault()
+      fetch(`http://localhost:5002/events/${this.state.eventToEdit.id}`, {
+        method: "PUT",
+        body: JSON.stringify(this.state.eventToEdit),
+        headers: {
+            "Content-Type": "application/json"
+        } 
+    }).then(() => { return fetch("http://localhost:5002/events") })
+        .then(a => a.json())
+        .then(EventList => {
+            this.setState({
+                events: EventList
+            })
+        })
+
+      }
+      EditEvent = (eventId) => {
+          console.log("eventId", eventId)
+          fetch(`http://localhost:5002/events/${eventId}`)
+
+          .then(a => a.json())
+          .then(EventList => {
+            this.setState({
+                eventToEdit: EventList
+            })
+     })
+}
+handleFieldChange = (event) => {
+    const stateToChange = this.state.eventToEdit
+    stateToChange[event.target.id] = event.target.value
+    this.setState({ eventToEdit: stateToChange })
+}
 
   
 // BUILD EVENT FORM    

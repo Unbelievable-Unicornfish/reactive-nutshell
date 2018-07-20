@@ -88,17 +88,7 @@ const Database = Object.create({}, {
             .then(a => a.json())
         }
     },
-    updateChat: {
-        value: (collectionName, itemId, dataObject) => {
-          return fetch(`http://localhost:5002/${collectionName}/${itemId}`, {
-            method: "PUT",
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dataObject)
-          });
-        }
-      },
+    
       getAllEvents: {
         value: () => {
             return fetch("http://localhost:5002/events")
