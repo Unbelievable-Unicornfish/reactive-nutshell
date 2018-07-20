@@ -63,10 +63,6 @@ const Database = Object.create({}, {
          .then(e => e.json())
      }
 
-        value: () => {
-            return fetch("http://localhost:5002/messages")
-                .then(e => e.json())
-        }
 
     },
     // this is the task function section
