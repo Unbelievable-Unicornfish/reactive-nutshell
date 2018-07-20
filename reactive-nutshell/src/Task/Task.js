@@ -11,7 +11,8 @@ export default props => {
                     {props.children}
                 </h5>
                 <p className="card-text">{props.task.DueDate}</p>
-                <button onClick={() => props.EditChat(props.message.id)}>Edit</button>
+    {/* creating edit button */}
+                <a href="#" onClick={() => props.EditTask(props.task.id)}>Edit</a>
                 <label>
                     Is completed:
           <input onClick={() => props.completeTask(props.task.id)}
