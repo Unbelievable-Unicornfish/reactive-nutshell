@@ -8,8 +8,9 @@
       "userId": 1
     },
     {
-      "name": "go shopping",
-      "DueDate": "123123",
+      "name": "test4",
+      "DueDate": "01/12/12",
+      "completed": false,
       "id": 2
     },
     {
@@ -18,10 +19,46 @@
       "id": 3
     },
     {
-      "name": "clean",
+      "name": "Test",
       "DueDate": "tomorrow",
-      "completed": false,
+      "completed": true,
       "id": 4
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 5
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "name": "sdsd",
+      "DueDate": "sdsd",
+      "completed": false,
+      "id": 10
     }
   ],
   "events": [
@@ -44,6 +81,41 @@
       "userName": "Blah111",
       "email": "Blah@blah.com",
       "id": 1
+    },
+    {
+      "userName": "Stalin",
+      "email": "SovietStalin47@USSR.gov",
+      "id": 2
+    },
+    {
+      "userName": "Adolf",
+      "email": "smallMustache@Deutschland.gov",
+      "id": 3
+    },
+    {
+      "userName": "Winston",
+      "email": "ChurchOnAHill@UK.gov",
+      "id": 4
+    },
+    {
+      "userName": "Toto",
+      "email": "RisingSun@JapEm.gov",
+      "id": 5
+    },
+    {
+      "userName": "Franklin",
+      "email": "WheelsOfFreedom@US.gov",
+      "id": 6
+    },
+    {
+      "userName": "Benito",
+      "email": "SwitchingSides@ITLY.gov",
+      "id": 7
+    },
+    {
+      "userName": "Dwight",
+      "email": "Eisenhower@US.gov",
+      "id": 8
     }
   ],
   "articles": [
@@ -62,7 +134,7 @@
       "id": 1
     },
     {
-      "message": "react will be the DEATH of me",
+      "message": "react of me",
       "creationDateTime": "2018-07-19 01:42:53 pm",
       "userId": 1,
       "id": 2
@@ -84,13 +156,38 @@
       "creationDateTime": "2018-07-19 05:31:50 pm",
       "userId": 1,
       "id": 6
-    },
-    {
-      "name": "pizza party",
-      "EventDate": "friday",
-      "EventLocation": "nss",
-      "id": 7
     }
   ],
-  "friends": []
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "friendId": 3
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "friendId": 4
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "friendId": 5
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "friendId": 6
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "friendId": 7
+    }
+  ]
 }

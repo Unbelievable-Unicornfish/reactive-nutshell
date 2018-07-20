@@ -6,17 +6,19 @@ import ChatList from "./Chat/ChatList"
 import TaskList from "./Task/TaskList"
 import EventList from "./Event/EventList"
 
+
 class App extends Component {
   render() {
     return (
-    
-      <React.Fragment>
-     <Login />
-     <ChatList />
-     <TaskList />
-     <EventList />
-     <ArticleList />
-     </React.Fragment>
+
+    <React.Fragment>
+      <Login />
+      <ArticleList />
+      <ChatList />
+      <TaskList />
+      <EventList />
+      <FriendList/>
+    </React.Fragment>
     )
   }
 }
