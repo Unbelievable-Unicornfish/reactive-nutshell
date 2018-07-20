@@ -39,6 +39,11 @@
       "id": 4
     },
     {
+      "userName": "Toto",
+      "email": "RisingSun@JapEm.gov",
+      "id":5
+    },
+    {
       "userName": "Franklin",
       "email": "WheelsOfFreedom@US.gov",
       "id": 6
@@ -102,6 +107,11 @@
       "id": 6,
       "userId": 1,
       "friendId": 7
+    },
+    {
+      "id":7,
+      "userId":1,
+      "friendId":8
     }
   ]
 }

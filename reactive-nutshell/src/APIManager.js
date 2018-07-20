@@ -23,7 +23,7 @@ const Database = Object.create({}, {
         .then((friendInfo) =>
     {
         console.log(friendInfo)
-        console.log(friendInfo[2].friendId)
+        // console.log(friendInfo[2].friendId)
 
         const promiseArray = friendInfo.map(element => {
             return  fetch (`http://localhost:5002/users/${element.friendId}`).then((Response) =>{
