@@ -1,0 +1,85 @@
+{
+  "tasks": [
+    {
+      "name": "Eat Food",
+      "dueDate": "12/13/12",
+      "completed": true,
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "123123",
+      "id": 2
+    },
+    {
+      "name": "yay",
+      "DueDate": "things",
+      "id": 3
+    }
+ 
+  ],
+  "events": [
+    {
+      "name": "WOOO",
+      "date": "12/12/12",
+      "location": "Nashville",
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "userName": "Blah111",
+      "email": "Blah@blah.com",
+      "id": 1
+    }
+  ],
+  "articles": [
+    {
+      "title": "Cat Eats Baby",
+      "summary": "Cat Gets Hungry",
+      "Url": "www.cnn.com",
+      "id": 1
+    },
+    {
+      "title": "Man With Chainsaw Hands Murders Wife",
+      "summary": "They just wanted to cuddle",
+      "Url": "www.cnn.com",
+      "id": 3
+    }
+  ],
+  "messages": [
+    {
+      "message": "stuff",
+      "creationDateTime": "",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "message": "react will be the DEATH of me",
+      "creationDateTime": "2018-07-19 01:42:53 pm",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "message": "hello",
+      "creationDateTime": "2018-07-19 01:46:08 pm",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "message": "poop",
+      "creationDateTime": "2018-07-19 02:16:43 pm",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "message": "blah",
+      "creationDateTime": "2018-07-19 05:31:50 pm",
+      "userId": 1,
+      "id": 6
+    }
+  ],
+  "friends": []
+}

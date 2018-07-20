@@ -8,30 +8,11 @@ export default class TaskList extends Component {
         tasks: []
     }
 
-    // deleteTask = (taskId) => {
-    //     // Delete the specified task from the API
-    //     fetch(`http://localhost:5002/tasks/${taskId}`, {
-    //         method: "DELETE"
-    //     })
-    //         // When DELETE is finished, retrieve the new list of tasks
-    //         .then(() => {
-    //             // Remember you HAVE TO return this fetch to the subsequenet `then()`
-    //             return fetch("http://localhost:5002/tasks")
-    //         })
-    //         // Once the new array of tasks is retrieved, set the state
-    //         .then(a => a.json())
-    //         .then(taskList => {
-    //             this.setState({
-    //                 tasks: taskList
-    //             })
-    //         })
-    // }
-//get tasks from Database
     componentDidMount() {
         Database.getAllTasks()
             .then(tasks => this.setState({ tasks: tasks }))
     }
-//checking to see if the state has changed
+    //checking to see if the state has changed
     taskFormInput = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
@@ -39,16 +20,23 @@ export default class TaskList extends Component {
         this.setState(stateToChange)
     }
 
-    completeTask = (taco)  => {
-        console.log(taco)
-    
+    completeTask = (passingIn) => {
+        console.log(Database.updateOneItem)
+        Database.updateOneItem(passingIn)
+            .then((gettingTasks) => {
+                console.log(gettingTasks, "getting tasks")
+                Database.getAllTasks()
+                .then(tasks => this.setState({ tasks: tasks }))
+               
+            })
+        
     }
 
     addTask(event) {
         event.preventDefault()
-        const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate }
-        // console.log("event", event)
-        // console.log("newObject", newObject)
+        const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate, completed: false}
+        console.log("event", event)
+        console.log("newObject", newObject)
         fetch("http://localhost:5002/tasks", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -56,16 +44,12 @@ export default class TaskList extends Component {
         })
             // When POST is finished, retrieve the new list of tasks
             .then(() => {
-                return fetch("http://localhost:5002/tasks")
-            })
-            .then(a => a.json())
-            .then(taskList => {
-                this.setState({
-                    tasks: taskList
-                })
+                Database.getAllTasks()
+                .then(tasks => this.setState({ tasks: tasks }))
+    
             })
     }
-// creating the form
+    // creating the form
     render() {
         return (
             <React.Fragment>
