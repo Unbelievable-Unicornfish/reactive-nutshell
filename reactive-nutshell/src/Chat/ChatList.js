@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Chat from "./Chat"
 import Database from "../APIManager"
+import Moment from "moment";
 
 export default class ChatList extends Component {
     state = {
@@ -10,7 +11,10 @@ export default class ChatList extends Component {
     //"fetching" the state from the database 
     componentDidMount() {
         Database.gettingAllMessagesFromDatabase()
-            .then(messages => this.setState({ messages: messages }))
+            .then(messages => {
+                this.setState({ messages: messages })
+            }
+            )
     }
 
     //checking to see if the state has changed
@@ -21,15 +25,22 @@ export default class ChatList extends Component {
         this.setState(stateToChange)
         // console.log("this.state", this.state)
     }
-
+    getUserNameByUserId = (userId) => {
+        Database.getUserNameByUserId(userId)
+            .then(userName => this.setState({ messages: userName }))
+    }
     addMessage = (event) => {
         event.preventDefault()
+        let timestamp = Moment().format("YYYY-MM-DD hh:mm:ss a");
         const newObject = {
             message: this.state.Chat,
-            // creationDateTime: this.state.newObject.message 
+            creationDateTime: timestamp,
+            userId: Database.getIdOfCurrentUser()
         }
         Database.addMessage(newObject)
-            .then(ChatList => { this.setState({ messages: ChatList }) })
+            .then(ChatList => {
+                this.setState({ messages: ChatList })
+            })
     }
 
     handleEdit = (event) => {
@@ -40,7 +51,7 @@ export default class ChatList extends Component {
             headers: {
                 "Content-Type": "application/json"
             }
-        }).then(() => { return fetch("http://localhost:5002/messages") })
+        }).then(() => { return fetch("http://localhost:5002/messages?_expand=user") })
             .then(a => a.json())
             .then(ChatList => {
                 this.setState({
@@ -88,26 +99,25 @@ export default class ChatList extends Component {
                 </form>
                 {
                     this.state.messages.map(message =>
-                        <Chat key={message.id} message={message} EditChat={this.EditChat}>
-                            {message.name}
-                        </Chat>)
+                        <Chat key={message.id} message={message} EditChat={this.EditChat} message={message} />
+                    )
                 }
                 {
                     (
                         <form onSubmit={this.handleEdit.bind(this)}>
-                        {/* <h1 className="h3 mb-3 font-weight-normal">Edit Message</h1> */}
-                        {/* <label htmlFor="Edit Message">
+                            {/* <h1 className="h3 mb-3 font-weight-normal">Edit Message</h1> */}
+                            {/* <label htmlFor="Edit Message">
                             Name:
                         </label> */}
-                        <input onChange={this.handleFieldChange} type="text"
-                            id="message"
-                            placeholder="Edit Message"
-                            value={this.state.chatToEdit.message}
-                            required="" autoFocus="" />
-                        <button type="submit">
-                            Update
+                            <input onChange={this.handleFieldChange} type="text"
+                                id="message"
+                                placeholder="Edit Message"
+                                value={this.state.chatToEdit.message}
+                                required="" autoFocus="" />
+                            <button type="submit">
+                                Update
                         </button>
-                    </form>
+                        </form>
                     )
                 }
             </React.Fragment>
