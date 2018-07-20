@@ -3,7 +3,7 @@
     {
       "name": "Eat Food",
       "dueDate": "12/13/12",
-      "completed": false,
+      "completed": true,
       "id": 1,
       "userId": 1
     },
@@ -17,11 +17,7 @@
       "DueDate": "things",
       "id": 3
     },
-    {
-      "name": "go shopping",
-      "DueDate": "tomorrow",
-      "id": 4
-    }
+ 
   ],
   "events": [
     {

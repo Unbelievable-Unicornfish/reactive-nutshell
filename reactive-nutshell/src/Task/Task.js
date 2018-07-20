@@ -11,13 +11,13 @@ export default props => {
                     {props.children}
                 </h5>
                 <p className="card-text">{props.task.DueDate}</p>
-                <button>Edit</button>
+                <button onClick={() => props.EditChat(props.message.id)}>Edit</button>
                 <label>
                     Is completed:
           <input onClick={() => props.completeTask(props.task.id)}
                         name="isCompleted"
                         type="checkbox"
-                        // checked={props.task.deleteTask}
+                        // checked={props.task.completeTask}
                         />
                  </label>
             </div>
