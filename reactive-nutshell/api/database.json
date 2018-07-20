@@ -1,0 +1,89 @@
+{
+  "tasks": [
+    {
+      "name": "Eat Food",
+      "dueDate": "12/13/12",
+      "completed": true,
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "123123",
+      "id": 2
+    },
+    {
+      "name": "yay",
+      "DueDate": "things",
+      "id": 3
+    },
+    {
+      "name": "write",
+      "DueDate": "03/23/22",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "name": "write",
+      "DueDate": "03/23/22",
+      "completed": true,
+      "id": 5
+    },
+    {
+      "name": "write",
+      "DueDate": "03/23/22",
+      "completed": true,
+      "id": 6
+    }
+  ],
+  "events": [
+    {
+      "name": "WOOO",
+      "date": "12/12/12",
+      "location": "Nashville",
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "userName": "Blah111",
+      "email": "Blah@blah.com",
+      "id": 1
+    }
+  ],
+  "articles": [
+    {
+      "title": "Cat Eats Baby",
+      "summary": "Cat Gets Hungry",
+      "Url": "www.cnn.com",
+      "id": 1
+    },
+    {
+      "title": "Pig Eats Baby",
+      "summary": "Pig Gets Hungry",
+      "Url": "www.cnn.com",
+      "id": 3
+    },
+    {
+      "title": "hungry",
+      "summary": "need food",
+      "id": 4
+    }
+  ],
+  "messages": [
+    {
+      "message": "",
+      "creationDateTime": "",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ],
+  "friends": []
+}

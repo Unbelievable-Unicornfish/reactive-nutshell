@@ -4,21 +4,22 @@ import './App.css';
 import ArticleList from './Articles/ArticleList';
 
 import Login from "./Login"
-import ChatList from "./ChatList"
-import TaskList from "./TaskList"
+import ChatList from "./Chat/ChatList"
+import TaskList from "./Task/TaskList";
 
 
 class App extends Component {
   render() {
     return (
 
+  
     
 
-      <React.Fragment>
-     <ChatList />
-     <TaskList />
-     <ArticleList />
-     </React.Fragment>
+    <React.Fragment>
+      <ArticleList />
+      <ChatList />
+      <TaskList />
+    </React.Fragment>
     )
   }
 }
