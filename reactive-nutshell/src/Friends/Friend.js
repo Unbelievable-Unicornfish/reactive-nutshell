@@ -3,6 +3,7 @@ import React from "react";
 
 export default props => {
   return (
+    // <h1 className= "section-title">Friend List</h1>
     <div className="card" style={{ width: `18rem` }}>
       <div className="card-body">
         <h5 className="card-title">{props.children}</h5>

@@ -45,6 +45,8 @@ render() {
     return (
     <React.Fragment>
         <ul>
+        <h1 className="h3 mb-3 font-weight-normal">Friend List</h1>
+
         {this.state.friends.map(friends => (
             <Friend
             key={friends.id}

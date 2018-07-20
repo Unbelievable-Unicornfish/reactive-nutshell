@@ -3,9 +3,61 @@
     {
       "name": "Eat Food",
       "dueDate": "12/13/12",
-      "completed": false,
+      "completed": true,
       "id": 1,
       "userId": 1
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "123123",
+      "id": 2
+    },
+    {
+      "name": "yay",
+      "DueDate": "things",
+      "id": 3
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 5
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "name": "sdsd",
+      "DueDate": "sdsd",
+      "completed": false,
+      "id": 10
     }
   ],
   "events": [
@@ -41,7 +93,7 @@
     {
       "userName": "Toto",
       "email": "RisingSun@JapEm.gov",
-      "id":5
+      "id": 5
     },
     {
       "userName": "Franklin",
@@ -61,20 +113,66 @@
   ],
   "articles": [
     {
-      "title": "test",
-      "summary": "test",
-      "url": "test.com",
-      "timeStamp": "",
-      "userId": 1,
+      "title": "Cat Eats Baby",
+      "summary": "Cat Gets Hungry",
+      "Url": "www.cnn.com",
       "id": 1
+    },
+    {
+      "title": "Man With Chainsaw Hands Murders Wife",
+      "summary": "They just wanted to cuddle",
+      "Url": "www.cnn.com",
+      "id": 3
+    },
+    {
+      "title": "WOWZERS",
+      "summary": "WOOOOOOO",
+      "URL": "www.wowowow.com",
+      "id": 4
     }
   ],
   "messages": [
     {
-      "message": "",
+      "message": "stuff",
       "creationDateTime": "",
       "userId": 1,
       "id": 1
+    },
+    {
+      "message": "react of me",
+      "creationDateTime": "2018-07-19 01:42:53 pm",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "message": "hello",
+      "creationDateTime": "2018-07-19 01:46:08 pm",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "message": "poop",
+      "creationDateTime": "2018-07-19 02:16:43 pm",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "message": "blah",
+      "creationDateTime": "2018-07-19 05:31:50 pm",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "message": "Test wowoowow",
+      "creationDateTime": "2018-07-20 10:14:01 am",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "message": "Is there bacon?",
+      "creationDateTime": "2018-07-20 10:16:59 am",
+      "userId": 1,
+      "id": 8
     }
   ],
   "friends": [
@@ -107,11 +205,6 @@
       "id": 6,
       "userId": 1,
       "friendId": 7
-    },
-    {
-      "id":7,
-      "userId":1,
-      "friendId":8
     }
   ]
 }
