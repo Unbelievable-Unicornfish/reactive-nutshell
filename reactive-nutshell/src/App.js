@@ -5,8 +5,7 @@ import ArticleList from './Articles/ArticleList';
 
 import Login from "./Login"
 import ChatList from "./Chat/ChatList"
-import TaskList from "./Task/TaskList"
-import EditChat from './Chat/EditChat';
+import TaskList from "./Task/TaskList";
 
 
 class App extends Component {
