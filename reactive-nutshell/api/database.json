@@ -8,8 +8,9 @@
       "userId": 1
     },
     {
-      "name": "go shopping",
-      "DueDate": "123123",
+      "name": "test4",
+      "DueDate": "01/12/12",
+      "completed": false,
       "id": 2
     },
     {
