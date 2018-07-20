@@ -31,6 +31,12 @@
       "location": "Nashville",
       "id": 1,
       "userId": 1
+    },
+    {
+      "name": "pizza party",
+      "EventDate": "friday",
+      "EventLocation": "nss",
+      "id": 2
     }
   ],
   "users": [
@@ -78,6 +84,12 @@
       "creationDateTime": "2018-07-19 05:31:50 pm",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "pizza party",
+      "EventDate": "friday",
+      "EventLocation": "nss",
+      "id": 7
     }
   ],
   "friends": []

@@ -60,7 +60,7 @@ const Database = Object.create({}, {
 
      value: () => {
          return fetch("http://localhost:5002/messages?_expand=user")
-         .then(e => e.json())
+        //  .then(e => e.json())
      }
 
     },

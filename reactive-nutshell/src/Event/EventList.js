@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Event from "./Event"
 import Database from "../APIManager"
+
 export default class EventList extends Component {
   state = {
     events: [],
@@ -10,7 +11,8 @@ export default class EventList extends Component {
   // GET EVENTS FROM DB
 componentDidMount() {
   Database.getAllEvents()
-    .then(events => this.setState({ events: events }))
+    .then(events => 
+        this.setState({ events: events }))
 }
 // CHECK STATE
 eventFormInput = (event) => {
