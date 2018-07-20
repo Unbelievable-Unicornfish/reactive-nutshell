@@ -7,7 +7,7 @@ export default props => {
             <div className="card-body" style={{ border: `4px solid black` }}>
                 <p className="card-text">{props.message.message}</p>
                 <p className="card-text">{props.message.creationDateTime}</p>
-                <p className="card-text">{props.message.user.userName}</p>
+                {/* <p className="card-text">{props.message.users.userName}</p> */}
                 <a href="#" onClick={() => props.EditChat(props.message.id)}>Edit</a>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import './App.css';
+import FriendList from "./Friends/FriendList"
 
 import ArticleList from './Articles/ArticleList';
 
@@ -12,9 +13,12 @@ import TaskList from "./Task/TaskList"
 
 
 
+
 class App extends Component {
   render() {
     return (
+    //  <FriendList/>
+    // );
 
   
     
@@ -24,6 +28,7 @@ class App extends Component {
       <ArticleList />
       <ChatList />
       <TaskList />
+      <FriendList/>
     </React.Fragment>
     )
   }
