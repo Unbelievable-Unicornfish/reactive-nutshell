@@ -4,6 +4,7 @@ import ArticleList from './Articles/ArticleList'
 import Login from "./Login"
 import ChatList from "./Chat/ChatList"
 import TaskList from "./Task/TaskList"
+import FriendList from "./Friends/FriendList"
 import EventList from "./Event/EventList"
 
 

@@ -10,10 +10,10 @@ const Database = Object.create({}, {
     },
     getIdOfCurrentUser: {
         value: () => {
-        const databaseString = sessionStorage.getItem("credentials")
-        const currentUserObject = JSON.parse(databaseString)
-        //   console.log("User stuff", currentUserObject)
-        return currentUserObject.currentUserId
+            const databaseString = sessionStorage.getItem("credentials")
+            const currentUserObject = JSON.parse(databaseString)
+            console.log("User stuff", currentUserObject)
+            return currentUserObject.currentUserId
         }
     },
     getFriends: {
@@ -110,18 +110,14 @@ const Database = Object.create({}, {
         }
     },
 
-    //this is the chat function section               //THIS SECTION MIGHT BE THE PROBLEM
+    //this is the chat function section
     gettingAllMessagesFromDatabase: {
 
      value: () => {
          return fetch("http://localhost:5002/messages?_expand=user")
-        //  .then(e => e.json())
+         .then(e => e.json())
      }
 
-<<<<<<< HEAD
-=======
-        
->>>>>>> master
     },
     // this is the task function section
     getAllTasks: {
