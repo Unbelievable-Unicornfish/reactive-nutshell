@@ -16,8 +16,13 @@
       "name": "yay",
       "DueDate": "things",
       "id": 3
+    },
+    {
+      "name": "clean",
+      "DueDate": "tomorrow",
+      "completed": false,
+      "id": 4
     }
- 
   ],
   "events": [
     {
@@ -41,12 +46,6 @@
       "summary": "Cat Gets Hungry",
       "Url": "www.cnn.com",
       "id": 1
-    },
-    {
-      "title": "Man With Chainsaw Hands Murders Wife",
-      "summary": "They just wanted to cuddle",
-      "Url": "www.cnn.com",
-      "id": 3
     }
   ],
   "messages": [
