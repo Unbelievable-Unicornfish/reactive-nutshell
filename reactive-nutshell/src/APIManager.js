@@ -10,7 +10,7 @@ const Database = Object.create({}, {
     },
     getIdOfCurrentUser: {
         value: () => {
-        const databaseString = sessionStorage.getItem("credentials")
+        const databaseString = localStorage.getItem("credentials")
         const currentUserObject = JSON.parse(databaseString)
         //   console.log("User stuff", currentUserObject)
         return currentUserObject.currentUserId
