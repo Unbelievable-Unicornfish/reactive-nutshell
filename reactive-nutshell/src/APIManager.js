@@ -10,7 +10,7 @@ const Database = Object.create({}, {
     },
     getIdOfCurrentUser: {
         value: () => {
-        const databaseString = sessionStorage.getItem("credentials")
+        const databaseString = localStorage.getItem("credentials")
         const currentUserObject = JSON.parse(databaseString)
         //   console.log("User stuff", currentUserObject)
         return currentUserObject.currentUserId
@@ -140,7 +140,18 @@ const Database = Object.create({}, {
             .then(e => e.json())
         }
     },
-
+    handleEdit: {
+        value:(tasksToEdit) => {
+        return fetch(`http://localhost:5002/tasks/${tasksToEdit.id}`, {
+            method: "PUT",
+            body: JSON.stringify(tasksToEdit),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(() => { return fetch("http://localhost:5002/tasks?completed=false") })
+            .then(a => a.json())
+    }
+},
     addMessage: {
         value: (newObject) => {
         return fetch("http://localhost:5002/messages", {

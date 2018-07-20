@@ -36,8 +36,6 @@ export default class TaskList extends Component {
     addTask(event) {
         event.preventDefault()
         const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate, completed: false }
-        console.log("event", event)
-        console.log("newObject", newObject)
         fetch("http://localhost:5002/tasks", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -53,15 +51,10 @@ export default class TaskList extends Component {
     // edit button
 
     handleEdit = (event) => {
+        const eventList = this.state.tasksToEdit
         event.preventDefault()
-        fetch(`http://localhost:5002/tasks/${this.state.tasksToEdit.id}`, {
-            method: "PUT",
-            body: JSON.stringify(this.state.tasksToEdit),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(() => { return fetch("http://localhost:5002/tasks") })
-            .then(a => a.json())
+        console.log(this.state.tasksToEdit,"tasks")
+        Database.handleEdit(eventList)
             .then(TaskList => {
                 this.setState({
                     tasks: TaskList
@@ -87,15 +80,11 @@ export default class TaskList extends Component {
     taskFormInput = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
-        // console.log("stateToChange", stateToChange)
         this.setState(stateToChange)
-        // console.log("this.state", this.state)
     }
     handleFieldChange = (event) => {
         const stateToChange = this.state.tasksToEdit
-        console.log(stateToChange, "state to change")
         stateToChange[event.target.id] = event.target.value
-        console.log(stateToChange, "State to change 2")
         this.setState({ tasksToEdit: stateToChange })
     }
 
@@ -131,6 +120,7 @@ export default class TaskList extends Component {
 
                     )
                 }
+    {/* creating edit message field/submit button          */}
                 {
                     (
                         <form onSubmit={this.handleEdit.bind(this)}>
