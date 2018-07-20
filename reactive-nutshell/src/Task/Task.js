@@ -6,7 +6,7 @@ export default props => {
     // console.log(props, "props")
     return (
         <div className="card" style={{ width: `18rem` }}>
-            <div className="card-body">
+            <div className="card-body" style={{ border: `4px solid black` }}>
                 <h5 className="card-title">
                     {props.children}
                 </h5>

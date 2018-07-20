@@ -6,7 +6,7 @@ import ArticleList from './Articles/ArticleList';
 import Login from "./Login"
 import ChatList from "./Chat/ChatList"
 import TaskList from "./Task/TaskList"
-import EditChat from './Chat/EditChat';
+
 
 
 class App extends Component {
@@ -17,6 +17,7 @@ class App extends Component {
     
 
     <React.Fragment>
+      <Login />
       <ArticleList />
       <ChatList />
       <TaskList />
