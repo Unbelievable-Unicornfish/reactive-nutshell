@@ -20,7 +20,7 @@ export default class Login extends Component {
         APIManager.getUserByUserName(this.state.userName)
         .then ((taco) => {
             console.log(taco[0].id)
-            sessionStorage.setItem(
+            localStorage.setItem(
                 "credentials",
                 JSON.stringify({
                     email: this.state.email,
