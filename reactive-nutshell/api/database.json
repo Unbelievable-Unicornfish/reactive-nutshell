@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "name": "test4",
+      "name": "clean house",
       "DueDate": "01/12/12",
       "completed": false,
       "id": 2
@@ -16,48 +16,6 @@
       "DueDate": "tomorrow",
       "completed": true,
       "id": 4
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 7
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 8
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 9
-    },
-    {
-      "name": "sdsd",
-      "DueDate": "sdsd",
-      "completed": true,
-      "id": 10
-    },
-    {
-      "name": "puppy shopping",
-      "DueDate": "friday",
-      "completed": false,
-      "id": 11
     }
   ],
   "events": [
@@ -72,6 +30,12 @@
       "EventDate": "friday",
       "EventLocation": "home",
       "id": 3
+    },
+    {
+      "name": "study session",
+      "EventDate": "friday",
+      "EventLocation": "nss",
+      "id": 4
     }
   ],
   "users": [
@@ -104,6 +68,13 @@
       "id": 1
     }
   ],
-  "messages": [],
+  "messages": [
+    {
+      "message": "hello world",
+      "creationDateTime": "2018-07-22 08:27:02 pm",
+      "userId": 1,
+      "id": 1
+    }
+  ],
   "friends": []
 }

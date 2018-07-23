@@ -5,12 +5,14 @@ export default props => {
     console.log(props, "props")
     return (
         <div className="card" style={{width: `18rem`}}>
-            <div className="card-body">
+            <div className="card-body" style={{ border: `3px solid black` }}>
                 <h5 className="card-title">
+                {props.children}
                 </h5>
 
-                <p className="card-text">{props.children}</p>
+                <p className="card-text">{props.event.eventName}</p>
                 <a href="#" onClick={() => props.EditEvent(props.event.id)}>Edit</a>
+                
                 {/* <button>Edit</button> */}
 
             </div>

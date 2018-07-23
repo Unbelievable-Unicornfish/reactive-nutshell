@@ -11,8 +11,10 @@ export default class EventList extends Component {
   // GET EVENTS FROM DB
 componentDidMount() {
   Database.getAllEvents()
-    .then(events => 
-        this.setState({ events: events }))
+    .then(events => {
+        this.setState({ events: events })
+    }
+ )
 }
 // CHECK STATE
 eventFormInput = (event) => {
@@ -20,11 +22,20 @@ eventFormInput = (event) => {
   stateToChange[event.target.id] = event.target.value
   this.setState(stateToChange)
 }
+getUserNameByUserId = (userId) => {
+    Database.getUserNameByUserId(userId)
+        .then(userName => this.setState({ events: userName }))
+}
 
 // ADD A NEW EVENT TO THE DATABASE
-  addEvent(event) {
+  addEvent = (event) => {
     event.preventDefault()
-    const newObject = { name: this.state.EventName, EventDate: this.state.EventDate, EventLocation: this.state.EventLocation }
+    const newObject = { 
+        name: this.state.EventName, 
+        EventDate: this.state.EventDate, 
+        EventLocation: this.state.EventLocation,
+        userId: Database.getIdOfCurrentUser()
+     }
     console.log("newObject", newObject)
     fetch("http://localhost:5002/events", {
         method: "POST",
@@ -131,6 +142,20 @@ handleFieldChange = (event) => {
                         <Event key={event.id} event={event} EditEvent={this.editEvent}>
                             {event.name}
                         </Event>
+                    )
+                }
+                {
+                    (
+                        <form onSubmit={this.handleEdit.bind(this)}>
+                            <input onChange={this.handleFieldChange} type="text"
+                                id="event"
+                                placeholder="Edit Event"
+                                value={this.state.eventToEdit.event}
+                                required="" autoFocus="" />
+                            <button type="submit">
+                                Update
+                        </button>
+                        </form>
                     )
                 }
 

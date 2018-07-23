@@ -13,7 +13,7 @@ const Database = Object.create({}, {
             const databaseString = sessionStorage.getItem("credentials")
             const currentUserObject = JSON.parse(databaseString)
             console.log("User stuff", currentUserObject)
-            return currentUserObject.currentUserId
+            // return currentUserObject.currentUserId
         }
     },
     getFriends: {
