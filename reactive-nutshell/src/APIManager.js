@@ -10,49 +10,48 @@ const Database = Object.create({}, {
     },
     getIdOfCurrentUser: {
         value: () => {
-        const databaseString = localStorage.getItem("credentials")
-        const currentUserObject = JSON.parse(databaseString)
-        //   console.log("User stuff", currentUserObject)
-        return currentUserObject.currentUserId
+            const databaseString = localStorage.getItem("credentials")
+            const currentUserObject = JSON.parse(databaseString)
+            //   console.log("User stuff", currentUserObject)
+            return currentUserObject.currentUserId
         }
     },
     getFriends: {
         value: (currentUserId) => {
-        return fetch (`http://localhost:5002/friends?userId=${currentUserId}`)
-        .then(e => e.json())
-        .then((friendInfo) =>
-    {
-        console.log(friendInfo)
-        // console.log(friendInfo[2].friendId)
+            return fetch(`http://localhost:5002/friends?userId=${currentUserId}`)
+                .then(e => e.json())
+                .then((friendInfo) => {
+                    console.log(friendInfo)
+                    // console.log(friendInfo[2].friendId)
 
-        const promiseArray = friendInfo.map(element => {
-            return  fetch (`http://localhost:5002/users/${element.friendId}`).then((Response) =>{
-                return Response.json()
-            })
+                    const promiseArray = friendInfo.map(element => {
+                        return fetch(`http://localhost:5002/users/${element.friendId}`).then((Response) => {
+                            return Response.json()
+                        })
 
-        })
-            console.log(promiseArray)
-            console.log(Promise.all(promiseArray))
-                return Promise.all(promiseArray)
-                
-            },
-)
+                    })
+                    console.log(promiseArray)
+                    console.log(Promise.all(promiseArray))
+                    return Promise.all(promiseArray)
+
+                },
+            )
         }
     },
 
     deleteFriends: {
         value: (friendId) => {
-        // Delete the specified friend
-        return fetch(`http://localhost:5002/users/${friendId}`, {
-            method: "DELETE"
-        })
-            // When DELETE is finished, retrieve the new list of friends
-            .then(() => {
-                // Remember you HAVE TO return this fetch to the subsequenet `then()`
-                return fetch("http://localhost:5002/users")
+            // Delete the specified friend
+            return fetch(`http://localhost:5002/users/${friendId}`, {
+                method: "DELETE"
             })
-            // Once the new array of animals is retrieved, set the state
-            .then(a => a.json())
+                // When DELETE is finished, retrieve the new list of friends
+                .then(() => {
+                    // Remember you HAVE TO return this fetch to the subsequenet `then()`
+                    return fetch("http://localhost:5002/users")
+                })
+                // Once the new array of animals is retrieved, set the state
+                .then(a => a.json())
         }
     },
     // deleteFriend: {
@@ -110,15 +109,15 @@ const Database = Object.create({}, {
         }
     },
 
-    //this is the chat function section               //THIS SECTION MIGHT BE THE PROBLEM
+    //this is the chat function section
     gettingAllMessagesFromDatabase: {
 
-     value: () => {
-         return fetch("http://localhost:5002/messages?_expand=user")
-         .then(e => e.json())
-     }
+        value: () => {
+            return fetch("http://localhost:5002/messages?_expand=user")
+                .then(e => e.json())
+        }
 
-        
+
     },
     // this is the task function section
     getAllTasks: {
@@ -127,6 +126,7 @@ const Database = Object.create({}, {
                 .then(e => e.json())
         }
     },
+
     updateOneItem: {
         value: (itemId) => {
             console.log(itemId)
@@ -137,25 +137,72 @@ const Database = Object.create({}, {
                 }),
                 headers: { "Content-Type": "application/json" },
             })
-            .then(e => e.json())
+                .then(e => e.json())
         }
     },
-
+    handleEdit: {
+        value: (tasksToEdit) => {
+            return fetch(`http://localhost:5002/tasks/${tasksToEdit.id}`, {
+                method: "PUT",
+                body: JSON.stringify(tasksToEdit),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(() => { return fetch("http://localhost:5002/tasks?completed=false") })
+                .then(a => a.json())
+        }
+    },
+    // on click, loading tasks
+    initialLoadingTasks: {
+        value: (loadingInitialTasks) => {
+            return fetch(`http://localhost:5002/tasks/${loadingInitialTasks}`, {
+                method: "POST",
+                body: JSON.stringify(loadingInitialTasks),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(() => { return fetch("http://localhost:5002/tasks?completed=false") })
+                .then(a => a.json())
+        }
+    },
+    // this is the message/chat section
     addMessage: {
         value: (newObject) => {
-        return fetch("http://localhost:5002/messages", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newObject)
-        })
-            // When POST is finished, retrieve the new list of tasks
+            return fetch("http://localhost:5002/messages", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newObject)
+            })
+                // When POST is finished, retrieve the new list of tasks
+                .then(() => {
+                    return fetch("http://localhost:5002/messages?_expand=user")
+                })
+                .then(a => a.json())
+        }
+    },
+    addEvent: {
+        value: (newObject) => {
+            return fetch("http://localhost:5002/events", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newObject)
+            })
             .then(() => {
-                return fetch("http://localhost:5002/messages?_expand=user")
+                return fetch("http://localhost:5002/events")
             })
             .then(a => a.json())
         }
-    }
+    },
     
+      getAllEvents: {
+        value: () => {
+            return fetch("http://localhost:5002/events")
+            .then(e => e.json())
+        }
+    }
+
     })
+
+    
 
 export default Database
