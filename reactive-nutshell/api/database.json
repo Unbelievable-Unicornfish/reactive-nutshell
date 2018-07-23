@@ -12,126 +12,9 @@
       "DueDate": "01/12/12",
       "completed": true,
       "id": 2
-    },
-    {
-      "name": "test",
-      "DueDate": "02/13/24",
-      "completed": true,
-      "id": 3
-    },
-    {
-      "name": "write",
-      "DueDate": "01/12/12",
-      "completed": true,
-      "id": 4
-    },
-    {
-      "name": "Go to the store",
-      "DueDate": "03/23/22",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "name": "Go to the mall",
-      "DueDate": "03/23/22",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "name": "Go to the mall",
-      "DueDate": "02/13/24",
-      "completed": true,
-      "id": 7
-    },
-    {
-      "name": "go walking",
-      "DueDate": "02/13/24",
-      "completed": true,
-      "id": 8
-    },
-    {
-      "name": "write something today",
-      "DueDate": "01/12/12",
-      "completed": true,
-      "id": 9
-    },
-    {
-      "name": "go to the store",
-      "DueDate": "01/12/12",
-      "completed": true,
-      "id": 10
-    },
-    {
-      "name": "go swimming",
-      "DueDate": "01/12/12",
-      "completed": true,
-      "id": 11
-    },
-    {
-      "name": "go swimming",
-      "DueDate": "01/12/12",
-      "completed": true,
-      "id": 12
-    },
-    {
-      "completed": true,
-      "id": 13
-    },
-    {
-      "completed": true,
-      "id": 14
-    },
-    {
-      "name": "go to school",
-      "DueDate": "03/23/22",
-      "completed": false,
-      "id": 15
-    },
-    {
-      "name": "study",
-      "DueDate": "03/23/22",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "name": "write",
-      "DueDate": "02/13/24",
-      "completed": true,
-      "id": 17
-    },
-    {
-      "name": "do homework later",
-      "DueDate": "02/13/24",
-      "completed": false,
-      "id": 18
-    },
-    {
-      "name": "write",
-      "DueDate": "02/13/24",
-      "completed": true,
-      "id": 19
-    }
-  ],
-  "events": [
-    {
-      "name": "WOOO",
-      "date": "12/12/12",
-      "location": "Nashville",
-      "id": 1,
-      "userId": 1
     }
   ],
   "users": [
-    {
-      "userName": "Blah111",
-      "email": "Blah@blah.com",
-      "id": 1
-    },
-    {
-      "userName": "Stalin",
-      "email": "SovietStalin47@USSR.gov",
-      "id": 2
-    },
     {
       "userName": "Adolf",
       "email": "smallMustache@Deutschland.gov",
@@ -141,16 +24,6 @@
       "userName": "Winston",
       "email": "ChurchOnAHill@UK.gov",
       "id": 4
-    },
-    {
-      "userName": "Toto",
-      "email": "RisingSun@JapEm.gov",
-      "id": 5
-    },
-    {
-      "userName": "Franklin",
-      "email": "WheelsOfFreedom@US.gov",
-      "id": 6
     },
     {
       "userName": "Benito",
@@ -169,24 +42,28 @@
       "summary": "Cat Gets Hungry",
       "Url": "www.cnn.com",
       "id": 1
+    }
+  ],
+  "events": [
+    {
+      "EventName": "baseball game",
+      "EventDate": "saturday",
+      "EventLocation": "here",
+      "userId": 4,
+      "id": 1
     },
     {
-      "title": "Man With Chainsaw Hands Murders Wife",
-      "summary": "They just wanted to cuddle",
-      "Url": "www.cnn.com",
-      "id": 3
-    },
-    {
-      "title": "WOWZERS",
-      "summary": "WOOOOOOO",
-      "URL": "www.wowowow.com",
-      "id": 4
+      "EventName": "study session",
+      "EventDate": "friday",
+      "EventLocation": "nss",
+      "userId": 4,
+      "id": 2
     }
   ],
   "messages": [
     {
-      "message": "stuff",
-      "creationDateTime": "",
+      "message": "hello world",
+      "creationDateTime": "2018-07-22 08:27:02 pm",
       "userId": 1,
       "id": 1
     },
@@ -201,62 +78,7 @@
       "creationDateTime": "2018-07-19 01:46:08 pm",
       "userId": 1,
       "id": 4
-    },
-    {
-      "message": "poop",
-      "creationDateTime": "2018-07-19 02:16:43 pm",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "message": "blah",
-      "creationDateTime": "2018-07-19 05:31:50 pm",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "message": "Test wowoowow",
-      "creationDateTime": "2018-07-20 10:14:01 am",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "message": "Is there bacon?",
-      "creationDateTime": "2018-07-20 10:16:59 am",
-      "userId": 1,
-      "id": 8
     }
   ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "friendId": 2
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "friendId": 3
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "friendId": 4
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "friendId": 5
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "friendId": 6
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "friendId": 7
-    }
-  ]
+  "friends": []
 }

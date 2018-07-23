@@ -109,7 +109,7 @@ const Database = Object.create({}, {
         }
     },
 
-    //this is the chat function section               //THIS SECTION MIGHT BE THE PROBLEM
+    //this is the chat function section
     gettingAllMessagesFromDatabase: {
 
         value: () => {
@@ -179,8 +179,30 @@ const Database = Object.create({}, {
                 })
                 .then(a => a.json())
         }
+    },
+    addEvent: {
+        value: (newObject) => {
+            return fetch("http://localhost:5002/events", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newObject)
+            })
+            .then(() => {
+                return fetch("http://localhost:5002/events")
+            })
+            .then(a => a.json())
+        }
+    },
+    
+      getAllEvents: {
+        value: () => {
+            return fetch("http://localhost:5002/events")
+            .then(e => e.json())
+        }
     }
 
-})
+    })
+
+    
 
 export default Database
