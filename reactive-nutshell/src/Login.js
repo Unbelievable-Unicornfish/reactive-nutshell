@@ -12,6 +12,7 @@ export default class Login extends Component {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
+
     }
 
     // Simplistic handler for login submit
@@ -27,7 +28,9 @@ export default class Login extends Component {
                     password: this.state.password,
                     userName: this.state.userName,
                     currentUserId: taco[0].id
+                    
                 })
+                
             ) 
         })
     
@@ -58,8 +61,9 @@ export default class Login extends Component {
                     id="userName"
                     placeholder="Enter UserName"
                     required="" />
-                <button type="submit">
-                    Sign in
+                <button type="submit"onClick={() => window.location.reload()
+                }>
+                Sign In
                 </button>
                 <br></br>
                 <input type="checkbox" name="checkbox" /> <label>REMEMBER ME</label>

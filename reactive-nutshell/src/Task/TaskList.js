@@ -6,7 +6,8 @@ import Database from "../APIManager"
 export default class TaskList extends Component {
     state = {
         tasks: [],
-        tasksToEdit: {}
+        tasksToEdit: {},
+        loadingInitialTasks: {}
     }
     // getting all tasks that read as "false", setting the state
     componentDidMount() {
@@ -48,7 +49,7 @@ export default class TaskList extends Component {
 
             })
     }
-    // edit button
+    // edit button calling event handler
 
     handleEdit = (event) => {
         const eventList = this.state.tasksToEdit
@@ -64,10 +65,10 @@ export default class TaskList extends Component {
 
     EditTask = (taskId) => {
         console.log("taskId", taskId)
-        // Delete the specified animal from the API
+     // Delete the specified animal from the API
         fetch(`http://localhost:5002/tasks/${taskId}`)
 
-            // Once the new array of animals is retrieved, set the state
+            // Once the new array is retrieved, set the state
             .then(a => a.json())
             .then(TaskList => {
                 console.log(TaskList, "tasklist")
@@ -111,7 +112,8 @@ export default class TaskList extends Component {
                     <button type="submit">
                         Add Task
                 </button>
-                </form>
+                 </form>
+                
                 {
                     this.state.tasks.map(task =>
                         <Task key={task.id} task={task} completeTask={this.completeTask} EditTask={this.EditTask}>
@@ -119,7 +121,9 @@ export default class TaskList extends Component {
                         </Task>
 
                     )
+                    
                 }
+                
     {/* creating edit message field/submit button          */}
                 {
                     (
@@ -135,6 +139,7 @@ export default class TaskList extends Component {
                         </form>
                     )
                 }
+                
             </React.Fragment>
         )
     }
