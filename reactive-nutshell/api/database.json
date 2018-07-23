@@ -1,36 +1,17 @@
 {
   "tasks": [
     {
-      "name": "clean house",
-      "DueDate": "01/12/12",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "name": "yay",
-      "DueDate": "things",
-      "id": 3
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
+      "name": "Eat Food",
+      "dueDate": "12/13/12",
       "completed": true,
-      "id": 4
-    }
-  ],
-  "events": [
-    {
-      "EventName": "study session",
-      "EventDate": "friday",
-      "EventLocation": "anywhere",
-      "id": 4,
-      "event": "yes"
+      "id": 1,
+      "userId": 1
     },
     {
-      "EventName": "soccer game",
-      "EventDate": "saturday",
-      "EventLocation": "park",
-      "id": 5
+      "name": "test5",
+      "DueDate": "01/12/12",
+      "completed": true,
+      "id": 2
     }
   ],
   "users": [
@@ -63,12 +44,40 @@
       "id": 1
     }
   ],
+  "events": [
+    {
+      "EventName": "baseball game",
+      "EventDate": "saturday",
+      "EventLocation": "here",
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "EventName": "study session",
+      "EventDate": "friday",
+      "EventLocation": "nss",
+      "userId": 4,
+      "id": 2
+    }
+  ],
   "messages": [
     {
       "message": "hello world",
       "creationDateTime": "2018-07-22 08:27:02 pm",
       "userId": 1,
       "id": 1
+    },
+    {
+      "message": "react of me",
+      "creationDateTime": "2018-07-19 01:42:53 pm",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "message": "helloooo",
+      "creationDateTime": "2018-07-19 01:46:08 pm",
+      "userId": 1,
+      "id": 4
     }
   ],
   "friends": []

@@ -13,7 +13,6 @@ class App extends Component {
     return (
 
     <React.Fragment>
-      <Login />
       <ArticleList />
       <ChatList />
       <TaskList />

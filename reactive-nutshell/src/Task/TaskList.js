@@ -6,7 +6,8 @@ import Database from "../APIManager"
 export default class TaskList extends Component {
     state = {
         tasks: [],
-        tasksToEdit: {}
+        tasksToEdit: {},
+        loadingInitialTasks: {}
     }
     // getting all tasks that read as "false", setting the state
     componentDidMount() {
@@ -36,8 +37,6 @@ export default class TaskList extends Component {
     addTask(event) {
         event.preventDefault()
         const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate, completed: false }
-        console.log("event", event)
-        console.log("newObject", newObject)
         fetch("http://localhost:5002/tasks", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -50,18 +49,13 @@ export default class TaskList extends Component {
 
             })
     }
-    // edit button
+    // edit button calling event handler
 
     handleEdit = (event) => {
+        const eventList = this.state.tasksToEdit
         event.preventDefault()
-        fetch(`http://localhost:5002/tasks/${this.state.tasksToEdit.id}`, {
-            method: "PUT",
-            body: JSON.stringify(this.state.tasksToEdit),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(() => { return fetch("http://localhost:5002/tasks") })
-            .then(a => a.json())
+        console.log(this.state.tasksToEdit,"tasks")
+        Database.handleEdit(eventList)
             .then(TaskList => {
                 this.setState({
                     tasks: TaskList
@@ -71,10 +65,10 @@ export default class TaskList extends Component {
 
     EditTask = (taskId) => {
         console.log("taskId", taskId)
-        // Delete the specified animal from the API
+     // Delete the specified animal from the API
         fetch(`http://localhost:5002/tasks/${taskId}`)
 
-            // Once the new array of animals is retrieved, set the state
+            // Once the new array is retrieved, set the state
             .then(a => a.json())
             .then(TaskList => {
                 console.log(TaskList, "tasklist")
@@ -87,15 +81,11 @@ export default class TaskList extends Component {
     taskFormInput = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
-        // console.log("stateToChange", stateToChange)
         this.setState(stateToChange)
-        // console.log("this.state", this.state)
     }
     handleFieldChange = (event) => {
         const stateToChange = this.state.tasksToEdit
-        console.log(stateToChange, "state to change")
         stateToChange[event.target.id] = event.target.value
-        console.log(stateToChange, "State to change 2")
         this.setState({ tasksToEdit: stateToChange })
     }
 
@@ -122,7 +112,8 @@ export default class TaskList extends Component {
                     <button type="submit">
                         Add Task
                 </button>
-                </form>
+                 </form>
+                
                 {
                     this.state.tasks.map(task =>
                         <Task key={task.id} task={task} completeTask={this.completeTask} EditTask={this.EditTask}>
@@ -130,7 +121,10 @@ export default class TaskList extends Component {
                         </Task>
 
                     )
+                    
                 }
+                
+    {/* creating edit message field/submit button          */}
                 {
                     (
                         <form onSubmit={this.handleEdit.bind(this)}>
@@ -145,6 +139,7 @@ export default class TaskList extends Component {
                         </form>
                     )
                 }
+                
             </React.Fragment>
         )
     }
