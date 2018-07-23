@@ -20,22 +20,17 @@
   ],
   "events": [
     {
-      "name": "pizza party",
+      "EventName": "study session",
       "EventDate": "friday",
-      "EventLocation": "nss",
-      "id": 2
+      "EventLocation": "anywhere",
+      "id": 4,
+      "event": "yes"
     },
     {
-      "name": "grad party",
-      "EventDate": "friday",
-      "EventLocation": "home",
-      "id": 3
-    },
-    {
-      "name": "study session",
-      "EventDate": "friday",
-      "EventLocation": "nss",
-      "id": 4
+      "EventName": "soccer game",
+      "EventDate": "saturday",
+      "EventLocation": "park",
+      "id": 5
     }
   ],
   "users": [

@@ -31,71 +31,79 @@ getUserNameByUserId = (userId) => {
   addEvent = (event) => {
     event.preventDefault()
     const newObject = { 
-        name: this.state.EventName, 
+        EventName: this.state.EventName, 
         EventDate: this.state.EventDate, 
         EventLocation: this.state.EventLocation,
         userId: Database.getIdOfCurrentUser()
      }
-    console.log("newObject", newObject)
-    fetch("http://localhost:5002/events", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newObject)
-    })
-    .then(() => {
-      return fetch("http://localhost:5002/events")
-    })
-    .then(a => a.json())
-    .then(eventList => {
-      this.setState({
-        event: eventList
-      })
-    })
+     Database.addEvent(newObject)
+     .then(EventList => {
+         this.setState({ events: EventList})
+     })
+    // console.log("newObject", newObject)
+    // fetch("http://localhost:5002/events", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(newObject)
+    // })
+    // .then(() => {
+    //   return fetch("http://localhost:5002/events")
+    // })
+    // .then(a => a.json())
+    // .then(eventList => {
+    //   this.setState({
+    //     event: eventList
+    //   })
+    // })
   }
-// UPDATE STATE UPON EDIT
-  handleFieldChange = evt => {
-    const stateToChange = {};
-    stateToChange[evt.target.id] = evt.target.value;
-    this.setState(stateToChange);
-  };
 
-  handleUpdate = e => {
-    e.preventDefault();
-
-    const updatedEvent = {name: this.state.name, eventDate: this.state.eventDate, eventLocation: this.state.eventLocation}
-    Database.updateItem("event", this.props.event.id, updatedEvent)
-    .then(() => {
-      this.props.history.push("/event");
-    })
-  };
   handleEdit = (event) => {
-      event.preventDefault()
-      fetch(`http://localhost:5002/events/${this.state.eventToEdit.id}`, {
-        method: "PUT",
-        body: JSON.stringify(this.state.eventToEdit),
-        headers: {
-            "Content-Type": "application/json"
-        } 
-    }).then(() => { return fetch("http://localhost:5002/events") })
+    event.preventDefault()
+    fetch(`http://localhost:5002/events/${this.state.eventToEdit.id}`, {
+      method: "PUT",
+      body: JSON.stringify(this.state.eventToEdit),
+      headers: {
+          "Content-Type": "application/json"
+      } 
+  }).then(() => { return fetch("http://localhost:5002/events") })
+      .then(a => a.json())
+      .then(EventList => {
+          this.setState({
+              events: EventList
+          })
+      })
+
+    }
+
+    EditEvent = (eventId) => {
+        console.log("eventId", eventId)
+        fetch(`http://localhost:5002/events/${eventId}`)
+
         .then(a => a.json())
         .then(EventList => {
-            this.setState({
-                events: EventList
-            })
-        })
-
-      }
-      EditEvent = (eventId) => {
-          console.log("eventId", eventId)
-          fetch(`http://localhost:5002/events/${eventId}`)
-
-          .then(a => a.json())
-          .then(EventList => {
-            this.setState({
-                eventToEdit: EventList
-            })
-     })
+          this.setState({
+              eventToEdit: EventList
+          })
+   })
 }
+// UPDATE STATE UPON EDIT
+//   handleFieldChange = evt => {
+//     const stateToChange = {};
+//     stateToChange[evt.target.id] = evt.target.value;
+//     this.setState(stateToChange);
+//   };
+
+//   handleUpdate = e => {
+//     e.preventDefault();
+
+//     const updatedEvent = {EventName: this.state.EventName, EventDate: this.state.EventDate, EventLocation: this.state.EventLocation}
+//     Database.updateItem("event", this.props.event.id, updatedEvent)
+//     .then(() => {
+//       this.props.history.push("/event");
+//     })
+//   };
+ 
+    
 handleFieldChange = (event) => {
     const stateToChange = this.state.eventToEdit
     stateToChange[event.target.id] = event.target.value
@@ -133,25 +141,37 @@ handleFieldChange = (event) => {
                     <button type="submit">
                         Add Event
                     </button>
-                    <button type="update">
+                    {/* <button type="update">
                         Update Event
-                    </button>
+                    </button> */}
                 </form>
                 {
                     this.state.events.map(event =>
-                        <Event key={event.id} event={event} EditEvent={this.editEvent}>
-                            {event.name}
-                        </Event>
+                        <Event key={event.id} event={event} EditEvent={this.EditEvent}
+                        event={event} />
                     )
                 }
                 {
                     (
                         <form onSubmit={this.handleEdit.bind(this)}>
                             <input onChange={this.handleFieldChange} type="text"
-                                id="event"
-                                placeholder="Edit Event"
-                                value={this.state.eventToEdit.event}
+                                id="EventName"
+                                placeholder="Edit Event Name"
+                                value={this.state.eventToEdit.EventName}
                                 required="" autoFocus="" />
+
+                                <input onChange={this.handleFieldChange} type="text"
+                                id="EventDate"
+                                placeholder="Edit Event Date"
+                                value={this.state.eventToEdit.EventDate}
+                                required="" autoFocus="" />
+
+                                <input onChange={this.handleFieldChange} type="text"
+                                id="EventLocation"
+                                placeholder="Edit Event Location"
+                                value={this.state.eventToEdit.EventLocation}
+                                required="" autoFocus="" />
+                                
                             <button type="submit">
                                 Update
                         </button>

@@ -14,9 +14,9 @@ class App extends Component {
 
     <React.Fragment>
       <Login />
-      <ArticleList />
+      {/* <ArticleList />
       <ChatList />
-      <TaskList />
+      <TaskList /> */}
       <EventList />
       <FriendList/>
     </React.Fragment>
