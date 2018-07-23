@@ -1,11 +1,18 @@
 import React, { Component } from "react"
 import './App.css';
-import ArticleList from './Articles/ArticleList'
+
+import FriendList from "./Friends/FriendList"
+import "./index.css"
+import ArticleList from './Articles/ArticleList';
+
 import Login from "./Login"
 import ChatList from "./Chat/ChatList"
 import TaskList from "./Task/TaskList"
-import FriendList from "./Friends/FriendList"
+
+import Header from "./Articles/Header"
+
 import EventList from "./Event/EventList"
+
 
 
 class App extends Component {
@@ -13,6 +20,11 @@ class App extends Component {
     return (
 
     <React.Fragment>
+
+      <Header/>
+      {/* <Login /> */}
+
+
       <ArticleList />
       <ChatList />
       <TaskList />

@@ -83,7 +83,8 @@ export default class ChatList extends Component {
     //rendering the form
     render() {
         return (
-            <React.Fragment>
+            <div className="chat">
+
                 <form onSubmit={this.addMessage.bind(this)}>
                     <h1 className="h3 mb-3 font-weight-normal">Chat</h1>
                     <label htmlFor="MessageName">
@@ -97,6 +98,7 @@ export default class ChatList extends Component {
                         Submit
                 </button>
                 </form>
+
                 {
                     this.state.messages.map(message =>
                         <Chat key={message.id} message={message} EditChat={this.EditChat} message={message} />
@@ -119,10 +121,10 @@ export default class ChatList extends Component {
                         </button>
                         </form>
                     )
-                
-                
+
                 }
-            </React.Fragment>
+                {/* <a name="chat"></a> */}
+            </div>
         )
     }
 }

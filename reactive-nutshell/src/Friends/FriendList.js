@@ -43,7 +43,7 @@ APIManager.getFriends(APIManager.getIdOfCurrentUser())
 render() {
     console.log("state", this.state)
     return (
-    <React.Fragment>
+    <div className="friend">
         <ul>
         <h1 className="h3 mb-3 font-weight-normal">Friend List</h1>
 
@@ -59,7 +59,7 @@ render() {
             </Friend>
         ))}
         </ul>
-    </React.Fragment>
+    </div>
     );
 }
 }

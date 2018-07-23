@@ -11,7 +11,50 @@
       "name": "test5",
       "DueDate": "01/12/12",
       "completed": true,
+
+      "id": 7
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "name": "Test",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "name": "stuffFF",
+      "DueDate": "sdsd",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 11
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 12
+    }
+  ],
+  "events": [
+    {
+      "name": "WOOO",
+      "date": "12/12/12",
+      "location": "Nashville",
+      "id": 1,
+      "userId": 1
+
       "id": 2
+
     }
   ],
   "users": [
@@ -26,6 +69,14 @@
       "id": 4
     },
     {
+
+      "userName": "Toto",
+      "email": "RisingSun@JapEm.gov",
+      "id": 5
+    },
+    {
+
+
       "userName": "Benito",
       "email": "SwitchingSides@ITLY.gov",
       "id": 7
@@ -78,7 +129,59 @@
       "creationDateTime": "2018-07-19 01:46:08 pm",
       "userId": 1,
       "id": 4
+
+    },
+    {
+      "message": "poop",
+      "creationDateTime": "2018-07-19 02:16:43 pm",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "message": "blah",
+      "creationDateTime": "2018-07-19 05:31:50 pm",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "message": "Test wowoowow",
+      "creationDateTime": "2018-07-20 10:14:01 am",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "message": "Is there bacon?",
+      "creationDateTime": "2018-07-20 10:16:59 am",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "message": "react will be the DEATH me",
+      "creationDateTime": "2018-07-22 08:41:27 am",
+      "userId": 1,
+      "id": 9
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "friendId": 3
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "friendId": 4
+    }
+  ]
+
     }
   ],
   "friends": []
+
 }
