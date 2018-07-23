@@ -12,7 +12,7 @@ const Database = Object.create({}, {
         value: () => {
         const databaseString = sessionStorage.getItem("credentials")
         const currentUserObject = JSON.parse(databaseString)
-        //   console.log("User stuff", currentUserObject)
+        console.log("User stuff", currentUserObject)
         return currentUserObject.currentUserId
         }
     },
@@ -41,36 +41,26 @@ const Database = Object.create({}, {
     },
 
     deleteFriends: {
-        value: (friendId) => {
+        value: (id) => {
         // Delete the specified friend
-        return fetch(`http://localhost:5002/users/${friendId}`, {
-            method: "DELETE"
+        return fetch(`http://localhost:5002/friends/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+                // "Content-Type": "application/x-www-form-urlencoded",
+            }
         })
             // When DELETE is finished, retrieve the new list of friends
             .then(() => {
                 // Remember you HAVE TO return this fetch to the subsequenet `then()`
-                return fetch("http://localhost:5002/users")
-            })
+                return  fetch (`http://localhost:5002/users/${id}`).then((Response) =>{
+                    return Response.json()
+                })            })
             // Once the new array of animals is retrieved, set the state
-            .then(a => a.json())
+            // .then((Response) => {Response.json()})
         }
     },
-    // deleteFriend: {
-    //     value: (friendId) => {
-    //     return fetch(`http://localhost:5002/users/${friendId}`, {
-    //         method: "DELETE"
-    //     })
-    //     }
-    // }
 
-
-
-    //         const databaseString = sessionStorage.getItem("credentials")
-    //         const currentUserObject = JSON.parse(databaseString)
-    //         console.log("User stuff", currentUserObject)
-    //         return currentUserObject.currentUserId
-    //     }
-    // },
 
     getAllArticles: {
         value: () => {

@@ -58,7 +58,8 @@ export default class Login extends Component {
                     id="userName"
                     placeholder="Enter UserName"
                     required="" />
-                <button type="submit">
+                <button type="submit"onClick={() => window.location.reload()
+}>
                     Sign in
                 </button>
                 <br></br>

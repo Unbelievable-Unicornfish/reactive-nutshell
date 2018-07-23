@@ -6,39 +6,27 @@ state = {
     friends: []
 };
 
-deleteFriends = (friendId) => {
-    APIManager.deleteFriends(friendId) 
-        .then(deletedFriends => this.setState({ friends: deletedFriends }))
-}
 
 
-// deleteFriends = friendId => {
-//     // Delete the specified animal from the API
-//     APIManager.deleteFriends("friends", friendId)
-//     .then(() => {
-//         return APIManager.getAll("friends")
-//     })      
-//     .then(FriendList => {
-//         this.setState({
-//         friends: FriendList
-//         });
-//     });
-// };
 
 
 
 componentDidMount() {
     console.log(APIManager.getIdOfCurrentUser())
-APIManager.getFriends(APIManager.getIdOfCurrentUser())
+    APIManager.getFriends(APIManager.getIdOfCurrentUser())
     .then(friends =>{
         console.log(friends)
-    this.setState({ friends: friends })
+        this.setState({ friends: friends })
     });
 }
 
-// .then((resolvedPromises) => {
-//     resolve(resolvedPromises)
-// }
+deleteFriends = (friendId) => {
+    APIManager.deleteFriends(friendId) 
+    .then(friends =>{
+        console.log(friends)
+    this.setState({ friends: friends })
+    })}
+
 
 render() {
     console.log("state", this.state)
