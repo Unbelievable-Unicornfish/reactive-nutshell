@@ -6,7 +6,7 @@ export default props => {
     // <h1 className= "section-title">Friend List</h1>
    
       <div className="header">
-        <h1 className="header-title">Definitely FaceBook</h1>
+        <h1 className="header-title">TacoShell</h1>
    
         
         
