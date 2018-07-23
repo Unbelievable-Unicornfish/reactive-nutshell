@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Task from "./Task"
 import Database from "../APIManager"
+import { FormControl, FormGroup, ControlLabel } from "../../node_modules/react-bootstrap";
 
 
 export default class TaskList extends Component {
@@ -102,27 +103,32 @@ export default class TaskList extends Component {
     // creating the form
     render() {
         return (
-            <React.Fragment>
+            <div className="task">
                 <form onSubmit={this.addTask.bind(this)}>
                     <h1 className="h3 mb-3 font-weight-normal">Task List</h1>
                     <label htmlFor="TaskName">
-                        Task Name
+                        Task Name:
                 </label>
-                    <input onChange={this.taskFormInput} type="text"
+                <FormGroup>
+                    <FormControl onChange={this.taskFormInput} type="text"
                         id="TaskName"
                         placeholder="Task Name"
                         required="" autoFocus="" />
-                    <label htmlFor="DueDate">
-                        Expected Completion Date
-                </label>
-                    <input onChange={this.taskFormInput} type="text"
+                        </FormGroup>
+                    <ControlLabel htmlFor="DueDate">
+                        Expected Completion Date:
+                </ControlLabel>
+                <FormGroup>
+                    <FormControl onChange={this.taskFormInput} type="text"
                         id="DueDate"
                         placeholder="Due Date"
                         required="" />
+                        </FormGroup>
                     <button type="submit">
                         Add Task
                 </button>
                 </form>
+
                 {
                     this.state.tasks.map(task =>
                         <Task key={task.id} task={task} completeTask={this.completeTask} EditTask={this.EditTask}>
@@ -145,7 +151,7 @@ export default class TaskList extends Component {
                         </form>
                     )
                 }
-            </React.Fragment>
+            </div>
         )
     }
 }

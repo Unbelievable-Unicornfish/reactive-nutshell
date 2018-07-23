@@ -55,10 +55,22 @@
       "id": 9
     },
     {
-      "name": "sdsd",
+      "name": "stuffFF",
       "DueDate": "sdsd",
       "completed": false,
       "id": 10
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 11
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 12
     }
   ],
   "events": [
@@ -95,11 +107,6 @@
       "userName": "Toto",
       "email": "RisingSun@JapEm.gov",
       "id": 5
-    },
-    {
-      "userName": "Franklin",
-      "email": "WheelsOfFreedom@US.gov",
-      "id": 6
     },
     {
       "userName": "Benito",
@@ -174,6 +181,12 @@
       "creationDateTime": "2018-07-20 10:16:59 am",
       "userId": 1,
       "id": 8
+    },
+    {
+      "message": "react will be the DEATH me",
+      "creationDateTime": "2018-07-22 08:41:27 am",
+      "userId": 1,
+      "id": 9
     }
   ],
   "friends": [
@@ -191,21 +204,6 @@
       "id": 3,
       "userId": 1,
       "friendId": 4
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "friendId": 5
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "friendId": 6
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "friendId": 7
     }
   ]
 }

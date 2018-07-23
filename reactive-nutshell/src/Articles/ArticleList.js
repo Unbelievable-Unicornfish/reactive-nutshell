@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Article from "./Article"
 import Database from "../APIManager"
-import { Row, Col } from "react-bootstrap"
+import { Row, Col, FormControl, FormGroup, ControlLabel } from "react-bootstrap"
 
 export default class ArticleList extends Component {
     state = {
@@ -51,33 +51,40 @@ componentDidMount() {
 
 render() {
     return (
-        <section id="articleSection">
+        <div className="article">
+
             <form onSubmit={this.addArticle.bind(this)}>
                 <h1 className="h3 mb-3 font-weight-normal">Add New Article</h1>
                 <label htmlFor="Article Name">
                     Article Name:
                 </label>
-                <input onChange={this.articleFormInput} type="text"
+               <FormGroup>
+                <FormControl onChange={this.articleFormInput} type="text"
                     id="title"
                     placeholder="Article Name"
                     value={this.state.newObject.title}
                     required="" autoFocus="" />
-                <label htmlFor="Summary">
+                    </FormGroup>
+                <ControlLabel htmlFor="Summary">
                     Summary Of Article:
-                </label>
-                <input onChange={this.articleFormInput} type="text"
+                </ControlLabel>
+                <FormGroup>
+                <FormControl onChange={this.articleFormInput} type="text"
                     id="summary"
                     placeholder="Summary Of Article"
                     value={this.state.newObject.summary}
                     required="" />
-                <label htmlFor="URL">
+                </FormGroup>
+                <ControlLabel htmlFor="URL">
                     Article URL:
-                </label>
-                <input onChange={this.articleFormInput} type="text"
+                </ControlLabel>
+                <FormGroup>
+                <FormControl onChange={this.articleFormInput} type="text"
                     id="URL"
                     placeholder="URL"
                     value={this.state.newObject.URL}
                     required="" autoFocus="" />
+                    </FormGroup>
                 <button type="submit">
                     Add Article
                 </button>
@@ -96,7 +103,7 @@ render() {
                     }
                 </Col>
             </Row>
-        </section>
+        </div>
     )
 }
 }
