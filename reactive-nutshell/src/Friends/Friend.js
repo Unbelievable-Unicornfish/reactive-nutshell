@@ -12,7 +12,10 @@ export default props => {
         <CardText>{props.friend.userName}</CardText>
         <CardText>{props.friend.email}</CardText>
         {/* <button className="removeFriend" onClick={() => props.deleteFriends(props.friends.friendId)}>Remove</button> */}
-        <button onClick={() => props.deleteFriends(props.friend.id)}>Delete</button>
+        <button onClick={() => {
+            props.deleteFriends(props.friend.id)
+            window.location.reload()
+          }}>Delete</button>
       </Card>
     </div>
   );

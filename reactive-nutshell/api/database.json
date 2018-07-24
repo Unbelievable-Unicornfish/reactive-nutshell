@@ -11,13 +11,83 @@
       "DueDate": "sdsd",
       "completed": false,
       "id": 10
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 11
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "name": "sdsd",
+      "DueDate": "sdsd",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "completed": true,
+      "id": 11
+    },
+    {
+      "completed": true,
+      "id": 12
+    },
+    {
+      "completed": true,
+      "id": 13
+    },
+    {
+      "completed": true,
+      "id": 14
+    },
+    {
+      "completed": true,
+      "id": 15
+    },
+    {
+      "completed": true,
+      "id": 16
+    },
+    {
+      "completed": true,
+      "id": 17
+    }
+  ],
+  "events": [
+    {
+      "name": "WOOO",
+      "date": "12/12/12",
+      "location": "Nashville",
+      "id": 1,
+      "userId": 1
     }
   ],
   "users": [
     {
+      "userName": "Blah111",
+      "email": "Blah@blah.com",
+      "id": 1
+    },
+    {
       "userName": "Adolf",
       "email": "smallMustache@Deutschland.gov",
-      "id": 1
+      "id": 2
+    },
+    {
+      "userName": "Winston",
+      "email": "ChurchOnAHill@UK.gov",
+      "id": 3
+    },
+    {
+      "userName": "Franklin",
+      "email": "WheelsOFFreedom@US.gov",
+      "id": 4
     },
     {
       "userName": "Toto",
@@ -49,15 +119,7 @@
       "id": 2
     }
   ],
-  "events": [
-    {
-      "EventName": "dumpster party",
-      "EventDate": "today",
-      "EventLocation": "at the dumpster",
-      "userId": 5,
-      "id": 3
-    }
-  ],
+  
   "messages": [
     {
       "message": "hellooooo",
@@ -66,22 +128,102 @@
       "id": 1
     },
     {
-      "message": "bleh i have to poop",
-      "creationDateTime": "2018-07-24 09:52:01 am",
+      "message": "Down with the west!!!",
+      "creationDateTime": "2018-07-24 11:25:59 am",
       "userId": 5,
       "id": 2
     }
   ],
   "friends": [
     {
+      "id": 1,
+      "userId": 1,
+      "friendId": 2
+    },
+    {
       "id": 2,
-      "userId": 5,
+      "userId": 1,
       "friendId": 3
     },
     {
       "id": 3,
-      "userId": 5,
+      "userId": 1,
       "friendId": 4
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "friendId": 5
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "friendId": 7
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "friendId": 8
+    },
+    {
+      "id": 8,
+      "userId": 2,
+      "friendId": 5
+    },
+    {
+      "id": 9,
+      "userId": 2,
+      "friendId": 7
+    },
+    {
+      "id": 10,
+      "userId": 5,
+      "friendId": 2
+    },
+    {
+      "id": 11,
+      "userId": 5,
+      "friendId": 7
+    },
+    {
+      "id": 12,
+      "userId": 7,
+      "friendId": 2
+    },
+    {
+      "id": 13,
+      "userId": 7,
+      "friendId": 5
+    },
+    {
+      "id": 14,
+      "userId": 3,
+      "friendId": 4
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "friendId": 8
+    },
+    {
+      "id": 16,
+      "userId": 4,
+      "friendId": 3
+    },
+    {
+      "id": 17,
+      "userId": 3,
+      "friendId": 8
+    },
+    {
+      "id": 18,
+      "userId": 8,
+      "friendId": 4
+    },
+    {
+      "id": 19,
+      "userId": 8,
+      "friendId": 3
     }
   ]
 }
