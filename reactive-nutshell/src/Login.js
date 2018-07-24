@@ -38,24 +38,25 @@ export default class Login extends Component {
 
     render() {
         return (
+            <div className="login">
             <form onSubmit={this.handleLogin}>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label htmlFor="inputEmail">
-                    Email address
+                    Email address:
                 </label>
                 <input onChange={this.handleFieldChange} type="email"
                     id="email"
                     placeholder="Email address"
                     required="" autoFocus="" />
                 <label htmlFor="inputPassword">
-                    Password
+                    Password:
                 </label>
                 <input onChange={this.handleFieldChange} type="password"
                     id="password"
                     placeholder="Password"
                     required="" />
                 <label htmlFor="inputUserName">
-                    UserName
+                    UserName:
                 </label>
                 <input onChange={this.handleFieldChange} type="text"
                     id="userName"
@@ -68,6 +69,7 @@ export default class Login extends Component {
                 <br></br>
                 <input type="checkbox" name="checkbox" /> <label>REMEMBER ME</label>
             </form>
+            </div>
         )
     }
 }

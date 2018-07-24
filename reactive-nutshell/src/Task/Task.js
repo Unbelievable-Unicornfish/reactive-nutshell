@@ -1,18 +1,19 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
+// import { Link } from "react-router-dom"
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default props => {
     // console.log(props, "props")
     return (
-        <div className="card" style={{ width: `18rem` }}>
-            <div className="card-body" style={{ border: `4px solid black` }}>
-                <h5 className="card-title">
-                    {props.children}
-                </h5>
-                <p className="card-text">{props.task.DueDate}</p>
+        <div>
+            <Card body outline color="primary" >
+                <CardTitle> {props.children}</CardTitle>
+                    
+               
+                <CardText>{props.task.DueDate}</CardText>
     {/* creating edit button */}
-                <a href="#" onClick={() => props.EditTask(props.task.id)}>Edit</a>
+               <a href="#" onClick={() => props.EditTask(props.task.id)}>Edit</a>
                 <label>
                     Is completed:
           <input onClick={() => props.completeTask(props.task.id)}
@@ -21,7 +22,7 @@ export default props => {
                         // checked={props.task.completeTask}
                         />
                  </label>
-            </div>
+           </Card>
         </div>
     )
 }

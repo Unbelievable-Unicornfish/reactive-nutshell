@@ -7,19 +7,7 @@
       "id": 7
     },
     {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 8
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 9
-    },
-    {
-      "name": "stuffFF",
+      "name": "stufffff",
       "DueDate": "sdsd",
       "completed": false,
       "id": 10
@@ -109,7 +97,7 @@
     {
       "userName": "Benito",
       "email": "SwitchingSides@ITLY.gov",
-      "id": 7
+      "id": 3
     },
     {
       "userName": "Dwight",
@@ -123,12 +111,18 @@
       "summary": "Cat Gets Hungry",
       "Url": "www.cnn.com",
       "id": 1
+    },
+    {
+      "title": "Man With Chainsaw Hands Murders Wife",
+      "summary": "they just wanted to cuddle",
+      "URL": "www.cnn.com",
+      "id": 2
     }
   ],
   "messages": [
     {
-      "message": "goodbye",
-      "creationDateTime": "2018-07-24 11:00:26 am",
+      "message": "hellooooo",
+      "creationDateTime": "2018-07-24 09:49:41 am",
       "userId": 5,
       "id": 1
     },
@@ -137,6 +131,12 @@
       "creationDateTime": "2018-07-24 11:25:59 am",
       "userId": 5,
       "id": 2
+    },
+    {
+      "message": "react will be the death of me",
+      "creationDateTime": "2018-07-24 11:46:55 am",
+      "userId": 1,
+      "id": 3
     }
   ],
   "friends": [
@@ -159,11 +159,6 @@
       "id": 4,
       "userId": 1,
       "friendId": 5
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "friendId": 7
     },
     {
       "id": 7,

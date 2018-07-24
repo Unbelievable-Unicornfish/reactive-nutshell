@@ -86,7 +86,7 @@ export default class ChatList extends Component {
             <div className="chat">
 
                 <form onSubmit={this.addMessage.bind(this)}>
-                    <h1 className="h3 mb-3 font-weight-normal">Chat</h1>
+                    <h1 id="chat-title" className="h3 mb-3 font-weight-normal">Chat</h1>
                     <label htmlFor="MessageName">
                         New Message:
                 </label>

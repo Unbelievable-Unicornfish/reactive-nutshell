@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 //import {link} from "react-router-dom";
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default props => {
 // console.log(props.article.id)
     return (
-      <div className="card" style={{width: `18rem`}}>
-        <div className="card-body" style={{ border: `4px solid black` }}>
-         <a target= "_blank" href={`http://${props.article.URL}`}> <h3 className="card-title">
-            {props.article.title} </h3> </a>
-          <p className="card-summary">{props.article.summary}</p>
+      <div>
+        <Card body outline color="success">
+        <CardTitle> <a target= "_blank" href={`http://${props.article.URL}`}> <h3 className="card-title">
+            {props.article.title} </h3> </a></CardTitle>
+          <CardText>{props.article.summary}</CardText>
           <button onClick={() => props.deleteArticle(props.article.id)}>Delete</button>
-        </div>
+        </Card>
       </div>
     )
    }

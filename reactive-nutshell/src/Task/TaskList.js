@@ -95,7 +95,7 @@ export default class TaskList extends Component {
         return (
             <div className="task">
                 <form onSubmit={this.addTask.bind(this)}>
-                    <h1 className="h3 mb-3 font-weight-normal">Task List</h1>
+                    <h1 id="task-title" className="h3 mb-3 font-weight-normal">Task List</h1>
                     <label htmlFor="TaskName">
                         Task Name:
                 </label>

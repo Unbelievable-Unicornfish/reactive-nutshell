@@ -54,7 +54,7 @@ render() {
         <div className="article">
 
             <form onSubmit={this.addArticle.bind(this)}>
-                <h1 className="h3 mb-3 font-weight-normal">Add New Article</h1>
+                <h1 id ="article-title"className="h3 mb-3 font-weight-normal">Add New Article</h1>
                 <label htmlFor="Article Name">
                     Article Name:
                 </label>
@@ -89,8 +89,7 @@ render() {
                     Add Article
                 </button>
             </form>
-            <Row className="show-grid">
-                <Col xs={10} md={3}>
+           
                     {
                         this.state.articles.map(article =>
                             <Article key={article.id}
@@ -101,8 +100,7 @@ render() {
                             </Article>
                         )
                     }
-                </Col>
-            </Row>
+               
         </div>
     )
 }
