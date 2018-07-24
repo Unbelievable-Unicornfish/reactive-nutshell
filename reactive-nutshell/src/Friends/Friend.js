@@ -10,7 +10,10 @@ export default props => {
         <h3 className="friend">{props.friend.userName}</h3>
         <h4 className="friendEmail">{props.friend.email}</h4>
         {/* <button className="removeFriend" onClick={() => props.deleteFriends(props.friends.friendId)}>Remove</button> */}
-        <button onClick={() => props.deleteFriends(props.friend.id)}>Delete</button>
+        <button onClick={() => {
+            props.deleteFriends(props.friend.id)
+            window.location.reload()
+          }}>Delete</button>
       </div>
     </div>
   );

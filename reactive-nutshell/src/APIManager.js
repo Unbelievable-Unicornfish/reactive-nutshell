@@ -45,18 +45,13 @@ const Database = Object.create({}, {
         // Delete the specified friend
         return fetch(`http://localhost:5002/friends/${id}`, {
             method: "DELETE",
-            headers: {
-                "Content-Type": "application/json; charset=utf-8",
-                // "Content-Type": "application/x-www-form-urlencoded",
-            }
         })
             // When DELETE is finished, retrieve the new list of friends
-            .then(() => {
+            .then((Response) => {
                 // Remember you HAVE TO return this fetch to the subsequenet `then()`
                 return  fetch (`http://localhost:5002/users/${id}`).then((Response) =>{
                     return Response.json()
                 })            })
-            // Once the new array of animals is retrieved, set the state
             // .then((Response) => {Response.json()})
         }
     },

@@ -3,13 +3,8 @@ import Friend from "./Friend";
 import APIManager from "../APIManager";
 export default class FriendList extends Component {
 state = {
-    friends: []
+    friends: [],
 };
-
-
-
-
-
 
 componentDidMount() {
     console.log(APIManager.getIdOfCurrentUser())
@@ -20,12 +15,16 @@ componentDidMount() {
     });
 }
 
-deleteFriends = (friendId) => {
-    APIManager.deleteFriends(friendId) 
-    .then(friends =>{
-        console.log(friends)
-    this.setState({ friends: friends })
-    })}
+deleteFriends = (id) => {
+    APIManager.deleteFriends(id)
+    // .then(APIManager.getFriends().then(Response=>{this.setState({friends: Response})})) 
+    // .then(deletedFriends =>{
+    //     console.log(deletedFriends)
+    // this.setState({ deletedFriends: deletedFriends })
+    // })
+}
+
+
 
 
 render() {
