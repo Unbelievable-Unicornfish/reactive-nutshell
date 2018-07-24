@@ -8,38 +8,10 @@
       "userId": 1
     },
     {
-      "name": "test4",
+      "name": "test5",
       "DueDate": "01/12/12",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "name": "yay",
-      "DueDate": "things",
-      "id": 3
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
       "completed": true,
-      "id": 4
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
+
       "id": 7
     },
     {
@@ -80,19 +52,12 @@
       "location": "Nashville",
       "id": 1,
       "userId": 1
+
+      "id": 2
+
     }
   ],
   "users": [
-    {
-      "userName": "Blah111",
-      "email": "Blah@blah.com",
-      "id": 1
-    },
-    {
-      "userName": "Stalin",
-      "email": "SovietStalin47@USSR.gov",
-      "id": 2
-    },
     {
       "userName": "Adolf",
       "email": "smallMustache@Deutschland.gov",
@@ -104,11 +69,14 @@
       "id": 4
     },
     {
+
       "userName": "Toto",
       "email": "RisingSun@JapEm.gov",
       "id": 5
     },
     {
+
+
       "userName": "Benito",
       "email": "SwitchingSides@ITLY.gov",
       "id": 7
@@ -125,24 +93,28 @@
       "summary": "Cat Gets Hungry",
       "Url": "www.cnn.com",
       "id": 1
+    }
+  ],
+  "events": [
+    {
+      "EventName": "baseball game",
+      "EventDate": "saturday",
+      "EventLocation": "here",
+      "userId": 4,
+      "id": 1
     },
     {
-      "title": "Man With Chainsaw Hands Murders Wife",
-      "summary": "They just wanted to cuddle",
-      "Url": "www.cnn.com",
-      "id": 3
-    },
-    {
-      "title": "WOWZERS",
-      "summary": "WOOOOOOO",
-      "URL": "www.wowowow.com",
-      "id": 4
+      "EventName": "study session",
+      "EventDate": "friday",
+      "EventLocation": "nss",
+      "userId": 4,
+      "id": 2
     }
   ],
   "messages": [
     {
-      "message": "stuff",
-      "creationDateTime": "",
+      "message": "hello world",
+      "creationDateTime": "2018-07-22 08:27:02 pm",
       "userId": 1,
       "id": 1
     },
@@ -157,6 +129,7 @@
       "creationDateTime": "2018-07-19 01:46:08 pm",
       "userId": 1,
       "id": 4
+
     },
     {
       "message": "poop",
@@ -206,4 +179,9 @@
       "friendId": 4
     }
   ]
+
+    }
+  ],
+  "friends": []
+
 }
