@@ -117,7 +117,7 @@ handleFieldChange = (event) => {
         return (
             <div className="event">
                 <form onSubmit={this.addEvent.bind(this)}>
-                    <h1 className="h3 mb-3 font-weight-normal">Event List</h1>
+                    <h1 id="event-title" className="h3 mb-3 font-weight-normal">Event List</h1>
                     <label htmlFor="EventName">
                         Event Name:
                 </label>

@@ -117,10 +117,9 @@ background-color: rgb(195, 155, 233);
               text-align: center;
               border: 5px solid black;
               background-image: url("taco.jpg");
-              font-size: 25px;
-              color: black;
-        
+             
             }
+            
             .login {
               /* The chat div starts at the beginning of column one */
                 grid-column-start: 1;
@@ -139,4 +138,39 @@ background-color: rgb(195, 155, 233);
                 background-image: url("tacoman.jpg");
                 text-align: center;
           
+              }
+              #article-title {
+                border: 4px solid white;
+                border-radius: 20%;
+                margin: 3px;
+                text-align: center;
+            
+              }
+              #friend-title {
+                border: 4px solid white;
+                border-radius: 20%;
+                margin: 3px;
+                text-align: center;
+              }
+              #chat-title {
+                border: 4px solid white;
+                border-radius: 20%;
+                margin: 3px;
+                text-align: center;
+              }
+              #task-title {
+                border: 4px solid white;
+                border-radius: 20%;
+                margin: 3px;
+                text-align: center;
+              }
+              #event-title {
+                border: 4px solid white;
+                border-radius: 20%;
+                margin: 3px;
+                text-align: center;
+              }
+              #header-title {
+                color: white;
+                font-size: 70px;
               }

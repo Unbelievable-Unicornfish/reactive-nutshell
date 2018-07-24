@@ -45,7 +45,7 @@ render() {
     return (
     <div className="friend">
         <ul>
-        <h1 className="h3 mb-3 font-weight-normal">Friend List</h1>
+        <h1 id="friend-title"className="h3 mb-3 font-weight-normal">Friend List</h1>
 
         {this.state.friends.map(friends => (
             <Friend
