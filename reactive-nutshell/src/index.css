@@ -11,12 +11,12 @@ body {
     grid-gap: 0px;
     
   /* Determines the number of columns and how wide each column is relative to the others */
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     
   /* Determines the number of rows and how tall each row is relative to the others */
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
     max-height: 100vh;
-
+min-height: 100vh;
   }
   .chat {
     /* The chat div starts at the beginning of column one */
@@ -84,12 +84,29 @@ background-color: rgb(195, 155, 233);
             background-color: pink;
       
           }
+          .event {
+            /* The chat div starts at the beginning of column one */
+              grid-column-start: 5;
+              
+            /* The chat div ends at the beginning of column 2 */
+              grid-column-end: 6;
+              
+            /* The chat div starts at the beginning of row 4 */
+              grid-row-start: 2;
+              
+            /* The chat div ends at the beginning of row 7 (row 7 doesn't actually exist, so it just ends at the bottom of the page) */
+              grid-row-end: 2;
+              overflow-y: scroll;
+              overflow-x: hidden;
+              background-color: rgb(247, 247, 74);
+        
+            }
           .header {
             /* The chat div starts at the beginning of column one */
               grid-column-start: 1;
               
             /* The chat div ends at the beginning of column 2 */
-            grid-column-end: 5;
+            grid-column-end: 6;
               
             /* The chat div starts at the beginning of row 4 */
               grid-row-start: 1;
