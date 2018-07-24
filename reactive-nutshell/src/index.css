@@ -64,7 +64,7 @@ background-color: rgb(195, 155, 233);
           grid-row-end: 2;
           overflow-y: scroll;
           overflow-x: hidden;
-          background-color: rgb(240, 240, 224);
+          background-color: rgb(11, 247, 247);
     
         }
         .task {
@@ -121,3 +121,22 @@ background-color: rgb(195, 155, 233);
               color: black;
         
             }
+            .login {
+              /* The chat div starts at the beginning of column one */
+                grid-column-start: 1;
+                
+              /* The chat div ends at the beginning of column 2 */
+                grid-column-end: 6;
+                
+              /* The chat div starts at the beginning of row 4 */
+                grid-row-start: 1;
+               
+                
+              /* The chat div ends at the beginning of row 7 (row 7 doesn't actually exist, so it just ends at the bottom of the page) */
+                grid-row-end: 3;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                background-image: url("tacoman.jpg");
+                text-align: center;
+          
+              }

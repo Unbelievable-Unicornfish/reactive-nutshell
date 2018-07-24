@@ -89,8 +89,7 @@ render() {
                     Add Article
                 </button>
             </form>
-            <Row className="show-grid">
-                <Col xs={10} md={3}>
+           
                     {
                         this.state.articles.map(article =>
                             <Article key={article.id}
@@ -101,8 +100,7 @@ render() {
                             </Article>
                         )
                     }
-                </Col>
-            </Row>
+               
         </div>
     )
 }
