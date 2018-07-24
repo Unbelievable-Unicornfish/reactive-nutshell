@@ -1,43 +1,8 @@
 {
   "tasks": [
     {
-      "name": "Eat Food",
-      "dueDate": "12/13/12",
-      "completed": true,
-      "id": 1,
-      "userId": 1
-    },
-    {
-      "name": "go shopping",
-      "DueDate": "123123",
-      "id": 2
-    },
-    {
-      "name": "yay",
-      "DueDate": "things",
-      "id": 3
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 4
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "name": "Test",
-      "DueDate": "tomorrow",
+      "name": "test5",
+      "DueDate": "01/12/12",
       "completed": true,
       "id": 7
     },
@@ -54,6 +19,24 @@
       "id": 9
     },
     {
+      "name": "stuffFF",
+      "DueDate": "sdsd",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 11
+    },
+    {
+      "name": "go shopping",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 9
+    },
+    {
       "name": "sdsd",
       "DueDate": "sdsd",
       "completed": false,
@@ -64,7 +47,7 @@
       "id": 11
     },
     {
-      "completed": false,
+      "completed": true,
       "id": 12
     },
     {
@@ -72,7 +55,7 @@
       "id": 13
     },
     {
-      "completed": false,
+      "completed": true,
       "id": 14
     },
     {
@@ -80,11 +63,11 @@
       "id": 15
     },
     {
-      "completed": false,
+      "completed": true,
       "id": 16
     },
     {
-      "completed": false,
+      "completed": true,
       "id": 17
     }
   ],
@@ -104,29 +87,24 @@
       "id": 1
     },
     {
-      "userName": "Stalin",
-      "email": "SovietStalin47@USSR.gov",
-      "id": 2
-    },
-    {
       "userName": "Adolf",
       "email": "smallMustache@Deutschland.gov",
-      "id": 3
+      "id": 2
     },
     {
       "userName": "Winston",
       "email": "ChurchOnAHill@UK.gov",
+      "id": 3
+    },
+    {
+      "userName": "Franklin",
+      "email": "WheelsOFFreedom@US.gov",
       "id": 4
     },
     {
       "userName": "Toto",
       "email": "RisingSun@JapEm.gov",
       "id": 5
-    },
-    {
-      "userName": "Franklin",
-      "email": "WheelsOfFreedom@US.gov",
-      "id": 6
     },
     {
       "userName": "Benito",
@@ -145,56 +123,20 @@
       "summary": "Cat Gets Hungry",
       "Url": "www.cnn.com",
       "id": 1
-    },
-    {
-      "title": "Man With Chainsaw Hands Murders Wife",
-      "summary": "They just wanted to cuddle",
-      "Url": "www.cnn.com",
-      "id": 3
     }
   ],
   "messages": [
     {
-      "message": "stuff",
-      "creationDateTime": "",
-      "userId": 1,
+      "message": "goodbye",
+      "creationDateTime": "2018-07-24 11:00:26 am",
+      "userId": 5,
       "id": 1
     },
     {
-      "message": "react of me",
-      "creationDateTime": "2018-07-19 01:42:53 pm",
-      "userId": 1,
+      "message": "Down with the west!!!",
+      "creationDateTime": "2018-07-24 11:25:59 am",
+      "userId": 5,
       "id": 2
-    },
-    {
-      "message": "hello",
-      "creationDateTime": "2018-07-19 01:46:08 pm",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "message": "poop",
-      "creationDateTime": "2018-07-19 02:16:43 pm",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "message": "blah",
-      "creationDateTime": "2018-07-19 05:31:50 pm",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "message": "Test wowoowow",
-      "creationDateTime": "2018-07-20 10:14:01 am",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "message": "Is there bacon?",
-      "creationDateTime": "2018-07-20 10:16:59 am",
-      "userId": 1,
-      "id": 8
     }
   ],
   "friends": [
@@ -219,11 +161,6 @@
       "friendId": 5
     },
     {
-      "id": 5,
-      "userId": 1,
-      "friendId": 6
-    },
-    {
       "id": 6,
       "userId": 1,
       "friendId": 7
@@ -232,6 +169,66 @@
       "id": 7,
       "userId": 1,
       "friendId": 8
+    },
+    {
+      "id": 8,
+      "userId": 2,
+      "friendId": 5
+    },
+    {
+      "id": 9,
+      "userId": 2,
+      "friendId": 7
+    },
+    {
+      "id": 10,
+      "userId": 5,
+      "friendId": 2
+    },
+    {
+      "id": 11,
+      "userId": 5,
+      "friendId": 7
+    },
+    {
+      "id": 12,
+      "userId": 7,
+      "friendId": 2
+    },
+    {
+      "id": 13,
+      "userId": 7,
+      "friendId": 5
+    },
+    {
+      "id": 14,
+      "userId": 3,
+      "friendId": 4
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "friendId": 8
+    },
+    {
+      "id": 16,
+      "userId": 4,
+      "friendId": 3
+    },
+    {
+      "id": 17,
+      "userId": 3,
+      "friendId": 8
+    },
+    {
+      "id": 18,
+      "userId": 8,
+      "friendId": 4
+    },
+    {
+      "id": 19,
+      "userId": 8,
+      "friendId": 3
     }
   ]
 }
