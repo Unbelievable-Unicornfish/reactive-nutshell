@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Event from "./Event"
 import Database from "../APIManager"
+import { FormControl, FormGroup } from "../../node_modules/react-bootstrap";
 
 export default class EventList extends Component {
   state = {
@@ -114,30 +115,36 @@ handleFieldChange = (event) => {
 // BUILD EVENT FORM    
       render() {
         return (
-            <React.Fragment>
+            <div className="event">
                 <form onSubmit={this.addEvent.bind(this)}>
                     <h1 className="h3 mb-3 font-weight-normal">Event List</h1>
                     <label htmlFor="EventName">
-                        Event Name
+                        Event Name:
                 </label>
-                    <input onChange={this.eventFormInput} type="text"
+                <FormGroup>
+                    <FormControl onChange={this.eventFormInput} type="text"
                         id="EventName"
                         placeholder="Event Name"
                         required="" autoFocus="" />
+                        </FormGroup>
                     <label htmlFor="EventDate">
-                        Event Date
+                        Event Date:
                 </label>
-                    <input onChange={this.eventFormInput} type="text"
+                <FormGroup>
+                    <FormControl onChange={this.eventFormInput} type="text"
                         id="EventDate"
                         placeholder="Event Date"
                         required="" />
+                        </FormGroup>
                         <label htmlFor="EventLocation">
-                        Event Location
+                        Event Location:
                 </label>
-                    <input onChange={this.eventFormInput} type="text"
+                <FormGroup>
+                    <FormControl onChange={this.eventFormInput} type="text"
                         id="EventLocation"
                         placeholder="Event Location"
                         required="" autoFocus="" />
+                        </FormGroup>
                     <button type="submit">
                         Add Event
                     </button>
@@ -180,7 +187,7 @@ handleFieldChange = (event) => {
                 }
 
                 
-            </React.Fragment>
+            </div>
         )
       }
 

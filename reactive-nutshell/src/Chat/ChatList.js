@@ -101,7 +101,7 @@ export default class ChatList extends Component {
 
                 {
                     this.state.messages.map(message =>
-                        <Chat key={message.id} message={message} EditChat={this.EditChat} message={message} />
+                        <Chat key={message.id} EditChat={this.EditChat} message={message} />
                     )
                 }
                 {
