@@ -16,6 +16,7 @@ body {
   /* Determines the number of rows and how tall each row is relative to the others */
     grid-template-rows: 1fr 5fr;
     max-height: 100vh;
+
   }
   .chat {
     /* The chat div starts at the beginning of column one */
