@@ -9,7 +9,7 @@
     {
       "name": "stufffff",
       "DueDate": "sdsd",
-      "completed": false,
+      "completed": true,
       "id": 10
     },
     {
@@ -57,6 +57,12 @@
     {
       "completed": true,
       "id": 17
+    },
+    {
+      "name": "go to the mall",
+      "DueDate": "tomorrow",
+      "completed": true,
+      "id": 18
     }
   ],
   "events": [
@@ -65,7 +71,17 @@
       "date": "12/12/12",
       "location": "Nashville",
       "id": 1,
-      "userId": 1
+      "userId": 1,
+      "EventName": "dumpster party",
+      "EventDate": "today",
+      "EventLocation": "at the dumpster"
+    },
+    {
+      "EventName": "pizza party",
+      "EventDate": "saturday",
+      "EventLocation": "nss",
+      "userId": 1,
+      "id": 2
     }
   ],
   "users": [
@@ -137,6 +153,24 @@
       "creationDateTime": "2018-07-24 11:46:55 am",
       "userId": 1,
       "id": 3
+    },
+    {
+      "message": "man i have to poop",
+      "creationDateTime": "2018-07-24 12:25:21 pm",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "message": "so bad",
+      "creationDateTime": "2018-07-24 12:25:21 pm",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "message": "goodbye",
+      "creationDateTime": "2018-07-24 03:11:27 pm",
+      "userId": 1,
+      "id": 6
     }
   ],
   "friends": [
@@ -149,26 +183,6 @@
       "id": 2,
       "userId": 1,
       "friendId": 3
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "friendId": 4
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "friendId": 5
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "friendId": 8
-    },
-    {
-      "id": 8,
-      "userId": 2,
-      "friendId": 5
     },
     {
       "id": 9,
@@ -186,39 +200,9 @@
       "friendId": 7
     },
     {
-      "id": 12,
-      "userId": 7,
-      "friendId": 2
-    },
-    {
-      "id": 13,
-      "userId": 7,
-      "friendId": 5
-    },
-    {
-      "id": 14,
-      "userId": 3,
-      "friendId": 4
-    },
-    {
-      "id": 15,
-      "userId": 3,
-      "friendId": 8
-    },
-    {
       "id": 16,
       "userId": 4,
       "friendId": 3
-    },
-    {
-      "id": 17,
-      "userId": 3,
-      "friendId": 8
-    },
-    {
-      "id": 18,
-      "userId": 8,
-      "friendId": 4
     },
     {
       "id": 19,
